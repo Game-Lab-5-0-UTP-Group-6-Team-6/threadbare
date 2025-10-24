@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dtqd7ym33e4po"
+path="res://.godot/imported/shadow_forest_sequence_puzzle.dialogue-78798be9a82d045897c46922f56e3d72.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/shadow_forest/3_sequence_puzzle/shadow_forest_sequence_puzzle.dialogue"
+dest_files=["res://.godot/imported/shadow_forest_sequence_puzzle.dialogue-78798be9a82d045897c46922f56e3d72.tres"]
+
+[params]
+
+defaults=true

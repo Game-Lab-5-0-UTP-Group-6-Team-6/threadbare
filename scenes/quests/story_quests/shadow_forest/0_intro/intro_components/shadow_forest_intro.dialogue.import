@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cgy6u576jarhk"
+path="res://.godot/imported/shadow_forest_intro.dialogue-7013f6efe8620e8ba766d52bf7beb2db.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/shadow_forest/0_intro/intro_components/shadow_forest_intro.dialogue"
+dest_files=["res://.godot/imported/shadow_forest_intro.dialogue-7013f6efe8620e8ba766d52bf7beb2db.tres"]
+
+[params]
+
+defaults=true

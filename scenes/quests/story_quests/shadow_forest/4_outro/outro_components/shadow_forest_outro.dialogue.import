@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dc65fme82pc12"
+path="res://.godot/imported/shadow_forest_outro.dialogue-8fc9134f49495699878c9ca9b58235a5.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/shadow_forest/4_outro/outro_components/shadow_forest_outro.dialogue"
+dest_files=["res://.godot/imported/shadow_forest_outro.dialogue-8fc9134f49495699878c9ca9b58235a5.tres"]
+
+[params]
+
+defaults=true
