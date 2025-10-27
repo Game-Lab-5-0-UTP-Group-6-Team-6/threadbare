@@ -1,11 +1,16 @@
-[gd_scene load_steps=11 format=4 uid="uid://oro3h87r022r"]
+[gd_scene load_steps=16 format=4 uid="uid://oro3h87r022r"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_fjujm"]
 [ext_resource type="Texture2D" uid="uid://cyldhgwc6c0so" path="res://scenes/quests/story_quests/shadow_forest/0_intro/intro_components/shadow_forest_intro_image.png" id="2_0i8i3"]
 [ext_resource type="SpriteFrames" uid="uid://dwmccdufmbn28" path="res://scenes/quests/story_quests/shadow_forest/player_components/shadow_forest_player.tres" id="3_8sr6o"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_rnv3t"]
 [ext_resource type="Resource" uid="uid://cgy6u576jarhk" path="res://scenes/quests/story_quests/shadow_forest/0_intro/intro_components/shadow_forest_intro.dialogue" id="5_2fnb8"]
+[ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://scenes/game_elements/characters/enemies/guard/guard.tscn" id="6_1w7rv"]
 [ext_resource type="PackedScene" uid="uid://v3usqiwy5wpr" path="res://scenes/game_elements/props/decoration/rock/rock.tscn" id="6_8m1x8"]
+[ext_resource type="PackedScene" uid="uid://lfvn4u30s4yf" path="res://scenes/game_elements/props/buildings/house/house_1.tscn" id="7_k8xb2"]
+[ext_resource type="PackedScene" uid="uid://7873qa54birk" path="res://scenes/game_elements/props/tree/tree.tscn" id="8_p41og"]
+[ext_resource type="PackedScene" uid="uid://do8ya53bglr13" path="res://scenes/game_elements/props/buildings/castle/castle.tscn" id="9_2qwfo"]
+[ext_resource type="PackedScene" uid="uid://cae10mh6roenk" path="res://scenes/ui_elements/story_quest_progress/story_quest_progress.tscn" id="10_pmcje"]
 
 [sub_resource type="Animation" id="Animation_1w7rv"]
 length = 0.001
@@ -148,6 +153,28 @@ dialogue = ExtResource("5_2fnb8")
 animation_player = NodePath("../OnTheGround/AnimationPlayer")
 next_scene = "uid://cryotmw8ah8tr"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
+
+[node name="Guard" parent="Cinematic" instance=ExtResource("6_1w7rv")]
+position = Vector2(58, 283)
+motion_mode = 0
+up_direction = Vector2(0.9950372, -0.099503726)
+
+[node name="House_1" parent="Cinematic" instance=ExtResource("7_k8xb2")]
+position = Vector2(541, 370)
+
+[node name="Tree" parent="Cinematic/House_1" instance=ExtResource("8_p41og")]
+position = Vector2(331, 183)
+scale = Vector2(1, 0.967)
+
+[node name="Castle" parent="." instance=ExtResource("9_2qwfo")]
+position = Vector2(175, 148)
+scale = Vector2(0.8, 0.8)
+
+[node name="StoryQuestProgress" parent="." instance=ExtResource("10_pmcje")]
+offset_left = 367.0
+offset_top = 15.0
+offset_right = 583.0
+offset_bottom = 143.0
 
 [node name="Rock" parent="." instance=ExtResource("6_8m1x8")]
 position = Vector2(125, 403)
