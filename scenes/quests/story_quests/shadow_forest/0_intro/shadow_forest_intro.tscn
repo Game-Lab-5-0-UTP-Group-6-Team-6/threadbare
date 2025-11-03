@@ -1,98 +1,31 @@
-[gd_scene load_steps=14 format=4 uid="uid://oro3h87r022r"]
+[gd_scene load_steps=20 format=4 uid="uid://oro3h87r022r"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_fjujm"]
-[ext_resource type="Texture2D" uid="uid://cyldhgwc6c0so" path="res://scenes/quests/story_quests/shadow_forest/0_intro/intro_components/shadow_forest_intro_image.png" id="2_0i8i3"]
-[ext_resource type="SpriteFrames" uid="uid://dwmccdufmbn28" path="res://scenes/quests/story_quests/shadow_forest/player_components/shadow_forest_player.tres" id="3_8sr6o"]
-[ext_resource type="PackedScene" uid="uid://boc4ibh8o13d2" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/trees1.tscn" id="4_8sr6o"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_rnv3t"]
 [ext_resource type="Resource" uid="uid://cgy6u576jarhk" path="res://scenes/quests/story_quests/shadow_forest/0_intro/intro_components/shadow_forest_intro.dialogue" id="5_2fnb8"]
+[ext_resource type="PackedScene" uid="uid://bxx5bf7wa3rlp" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_hint_rock.tscn" id="6_2qwfo"]
 [ext_resource type="PackedScene" uid="uid://v3usqiwy5wpr" path="res://scenes/game_elements/props/decoration/rock/rock.tscn" id="6_8m1x8"]
-[ext_resource type="PackedScene" uid="uid://do8ya53bglr13" path="res://scenes/game_elements/props/buildings/castle/castle.tscn" id="9_2qwfo"]
-
-[sub_resource type="TileSet" id="TileSet_rnv3t"]
+[ext_resource type="PackedScene" uid="uid://lfvn4u30s4yf" path="res://scenes/game_elements/props/buildings/house/house_1.tscn" id="7_k8xb2"]
+[ext_resource type="PackedScene" uid="uid://dv4f232y8w8dv" path="res://scenes/game_elements/props/decoration/water_rock/water_rock.tscn" id="7_pmcje"]
+[ext_resource type="PackedScene" uid="uid://b2gk6rutivuq6" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/shjourney_sequence_components/shjourney_Ghost.tscn" id="8_ljf15"]
+[ext_resource type="PackedScene" uid="uid://7873qa54birk" path="res://scenes/game_elements/props/tree/tree.tscn" id="8_p41og"]
+[ext_resource type="PackedScene" uid="uid://boc4ibh8o13d2" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/trees1.tscn" id="9_4u78g"]
+[ext_resource type="PackedScene" uid="uid://bi6kyun7o3k3o" path="res://scenes/quests/story_quests/el_juguete_perdido/objects_components/tree_moving.tscn" id="10_jeu3m"]
+[ext_resource type="PackedScene" uid="uid://c0104ickpm3ru" path="res://scenes/game_elements/props/decoration/flower/flower.tscn" id="12_g5ey0"]
+[ext_resource type="SpriteFrames" uid="uid://ddpc5h6jtt6uq" path="res://scenes/quests/story_quests/el_juguete_perdido/player_components/apolo_components/apolo_toy.tres" id="13_qdnjy"]
+[ext_resource type="SpriteFrames" uid="uid://dtoylirwywk0j" path="res://scenes/game_elements/characters/components/sprite_frames/storyweaver_blue.tres" id="14_3b066"]
+[ext_resource type="Texture2D" uid="uid://7afi18x3x1dm" path="res://assets/third_party/tiny-swords/Deco/18.png" id="15_o7yw8"]
 
 [sub_resource type="Animation" id="Animation_1w7rv"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("OnTheGround/Character:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"idle"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("OnTheGround/Character:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(400, 349)]
-}
 
 [sub_resource type="Animation" id="Animation_k8xb2"]
 resource_name = "walk_off"
 length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("OnTheGround/Character:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"walk", &"idle"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("OnTheGround/Character:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(495, 478), Vector2(1010, 478)]
-}
 
 [sub_resource type="Animation" id="Animation_p41og"]
 resource_name = "walk_on"
 length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("OnTheGround/Character:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"walk", &"idle"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("OnTheGround/Character:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-50, 478), Vector2(495, 478)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2qwfo"]
 _data = {
@@ -106,48 +39,32 @@ _data = {
 [node name="TileMapLayers" type="Node2D" parent="."]
 
 [node name="Ground" type="TileMapLayer" parent="TileMapLayers"]
-tile_map_data = PackedByteArray("AAAAAAUAAQAAAAEAAAABAAUAAQABAAEAAAACAAUAAQAIAAEAAAADAAUAAQABAAEAAAAEAAUAAQABAAEAAAAFAAUAAQABAAEAAAAGAAUAAQABAAEAAAAHAAUAAQABAAEAAAAIAAUAAQABAAEAAAAKAAUAAQABAAEAAAALAAUAAQABAAEAAAAMAAUAAQABAAEAAAANAAUAAQABAAEAAAAOAAUAAQABAAEAAAAAAAYAAQAAAAEAAAAAAAcAAQAAAAEAAAAAAAgAAQABAAEAAAABAAYAAQABAAEAAAABAAcAAQABAAEAAAABAAgAAQABAAEAAAACAAYAAQAIAAEAAAACAAcAAQAIAAMAAAACAAgAAQABAAEAAAADAAYAAQABAAEAAAADAAcAAQABAAEAAAADAAgAAQABAAEAAAAEAAYAAQABAAEAAAAEAAcAAQABAAEAAAAEAAgAAQABAAEAAAAFAAYAAQABAAEAAAAFAAcAAQABAAEAAAAFAAgAAQABAAEAAAAGAAYAAQABAAEAAAAGAAcAAQABAAEAAAAGAAgAAQABAAEAAAAHAAYAAQABAAEAAAAHAAgAAQABAAEAAAAIAAYAAQABAAEAAAAIAAgAAQABAAEAAAAJAAYAAAAAAAAAAAAJAAgAAAAAAAAAAAAKAAYAAQABAAEAAAAKAAgAAQABAAEAAAALAAYAAQABAAEAAAALAAgAAQABAAEAAAAMAAYAAQABAAEAAAAMAAcAAQABAAEAAAAMAAgAAQABAAEAAAANAAYAAQABAAEAAAANAAcAAQABAAEAAAANAAgAAQABAAEAAAAOAAYAAQABAAEAAAAOAAcAAQABAAEAAAAOAAgAAQABAAEAAAAAAAAAAQAAAAEAAAAAAAEAAQAAAAEAAAABAAEAAQABAAEAAAACAAEAAQABAAEAAAACAAIAAQABAAEAAAADAAIAAQABAAEAAAAEAAIAAQABAAEAAAAFAAIAAQABAAEAAAAFAAMAAQABAAEAAAAGAAMAAQABAAEAAAAHAAQAAQABAAEAAAAIAAQAAQABAAEAAAAOAAQAAQABAAEAAAAOAAMAAQABAAEAAAAOAAIAAQABAAEAAAAOAAEAAQABAAEAAAAOAAAAAQABAAEAAAANAAQAAQABAAEAAAANAAMAAQABAAEAAAANAAIAAQABAAEAAAANAAEAAQABAAEAAAANAAAAAQABAAEAAAAMAAQAAQABAAEAAAAMAAMAAQABAAEAAAAMAAIAAQABAAEAAAAMAAEAAQABAAEAAAAMAAAAAQABAAEAAAALAAQAAQABAAEAAAALAAMAAQABAAEAAAALAAIAAQABAAEAAAALAAEAAQABAAEAAAALAAAAAQABAAEAAAAKAAQAAQABAAEAAAAKAAMAAQABAAEAAAAKAAIAAQABAAEAAAAKAAEAAQABAAEAAAAKAAAAAQABAAEAAAAJAAQAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAAAAAAAAAAAAAAIAAMAAQABAAEAAAAIAAIAAQABAAEAAAAIAAEAAQABAAEAAAAIAAAAAQABAAEAAAAHAAMAAQABAAEAAAAHAAIAAQABAAEAAAAHAAEAAQABAAEAAAAHAAAAAQABAAEAAAAGAAQAAQABAAEAAAAGAAIAAQABAAEAAAAGAAEAAQABAAEAAAAGAAAAAQABAAEAAAAFAAQAAQABAAEAAAAFAAEAAQABAAEAAAAFAAAAAQABAAEAAAAEAAQAAQABAAEAAAAEAAMAAQABAAEAAAAEAAEAAQABAAEAAAAEAAAAAQABAAEAAAADAAQAAQABAAEAAAADAAMAAQABAAEAAAADAAEAAQABAAEAAAADAAAAAQABAAEAAAACAAQAAQAIAAEAAAACAAMAAQAIAAEAAAACAAAAAQABAAEAAAABAAQAAQABAAEAAAABAAMAAQABAAEAAAABAAIAAQABAAEAAAABAAAAAQABAAEAAAAAAAQAAQAAAAEAAAAAAAMAAQAAAAEAAAAAAAIAAQAAAAEAAAAPAAYAAQABAAEAAAAPAAUAAQABAAEAAAAPAAMAAQABAAEAAAAPAAQAAQABAAEAAAAPAAAAAQABAAEAAAAPAAEAAQABAAEAAAAPAAIAAQABAAEAAAAPAAcAAQABAAEAAAAPAAgAAQABAAEAAAAQAAgAAQABAAEAAAAQAAcAAQABAAEAAAAQAAUAAQABAAEAAAAQAAYAAQABAAEAAAAQAAQAAQABAAEAAAAQAAMAAQABAAEAAAAQAAIAAQABAAEAAAAQAAEAAQABAAEAAAAQAAAAAQABAAEAAAARAAAAAQABAAEAAAASAAAAAQABAAEAAAATAAAAAQABAAEAAAAUAAAAAQABAAEAAAAUAAEAAQABAAEAAAAUAAIAAQABAAEAAAAUAAMAAQABAAEAAAAUAAQAAQABAAEAAAAUAAUAAQABAAEAAAAUAAYAAQABAAEAAAAUAAcAAQABAAEAAAAUAAgAAQABAAEAAAATAAgAAQABAAEAAAASAAgAAQABAAEAAAARAAgAAQABAAEAAAAAAAkAAQABAAEAAAAAAAoAAQABAAEAAAABAAoAAQABAAEAAAACAAoAAQABAAEAAAADAAoAAQABAAEAAAAEAAoAAQABAAEAAAAFAAoAAQABAAEAAAAGAAoAAQABAAEAAAAHAAoAAQABAAEAAAAIAAoAAQABAAEAAAAJAAoAAAAAAAAAAAAKAAoAAQABAAEAAAALAAoAAQABAAEAAAAMAAoAAQABAAEAAAANAAoAAQABAAEAAAAOAAoAAQABAAEAAAAPAAoAAQABAAEAAAAQAAoAAQABAAEAAAARAAoAAQABAAEAAAASAAoAAQABAAEAAAATAAoAAQABAAEAAAATAAkAAQABAAEAAAAUAAkAAQABAAEAAAAUAAoAAQABAAEAAAASAAkAAQABAAEAAAARAAkAAQABAAEAAAAQAAkAAQABAAEAAAAPAAkAAQABAAEAAAAOAAkAAQABAAEAAAANAAkAAQABAAEAAAAMAAkAAQABAAEAAAALAAkAAQABAAEAAAAKAAkAAQABAAEAAAAIAAkAAQABAAEAAAAHAAkAAQABAAEAAAAGAAkAAQABAAEAAAAFAAkAAQABAAEAAAAEAAkAAQABAAEAAAADAAkAAQABAAEAAAACAAkAAQABAAEAAAABAAkAAQABAAEAAAARAAcAAQABAAEAAAASAAcAAQABAAEAAAATAAcAAQABAAEAAAARAAYAAQABAAEAAAASAAYAAQABAAEAAAATAAYAAQABAAEAAAARAAUAAQABAAEAAAARAAQAAQABAAEAAAASAAQAAQABAAEAAAASAAMAAQABAAEAAAARAAMAAQABAAEAAAARAAIAAQABAAEAAAASAAIAAQABAAEAAAATAAIAAQABAAEAAAASAAEAAQABAAEAAAARAAEAAQABAAEAAAATAAEAAQABAAEAAAATAAMAAQABAAEAAAATAAQAAQABAAEAAAATAAUAAQABAAEAAAASAAUAAQABAAEAAAAAAP//AQABAAEAAAABAP//AQABAAEAAAACAP//AQABAAEAAAADAP//AQABAAEAAAAEAP//AQABAAEAAAAFAP//AQABAAEAAAAGAP//AQABAAEAAAAIAP//AQABAAEAAAAHAP//AQABAAEAAAAJAP//AQABAAEAAAAKAP//AQABAAEAAAALAP//AQABAAEAAAAMAP//AQABAAEAAAANAP//AQABAAEAAAAOAP//AQABAAEAAAAPAP//AQABAAEAAAAQAP//AQABAAEAAAARAP//AQABAAEAAAASAP//AQABAAEAAAATAP//AQABAAEAAAAUAP//AQABAAEAAAAVAAMAAQABAAEAAAAVAAQAAQABAAEAAAAHAAcAAQABAAEAAAAIAAcAAQABAAEAAAAKAAcAAQABAAEAAAALAAcAAQABAAEAAAAJAAUAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAkAAAAAAAAAAAAXAAAAAwACAAAAAAAWAAAAAwACAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAUAAQAAAAEAAAABAAUAAQABAAEAAAACAAUAAQABAAEAAAADAAUAAQABAAEAAAAEAAUAAQABAAEAAAAFAAUAAQABAAEAAAAGAAUAAQABAAEAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAKAAUAAQAGAAEAAAALAAUAAQAGAAEAAAAMAAUAAQAGAAEAAAANAAUAAQAGAAEAAAAOAAUAAQAGAAEAAAAAAAYAAQAAAAEAAAAAAAcAAQAAAAEAAAAAAAgAAQAAAAEAAAABAAYAAQABAAEAAAABAAcAAQABAAEAAAABAAgAAQABAAEAAAACAAYAAQABAAEAAAACAAcAAQABAAEAAAACAAgAAQABAAEAAAADAAYAAQABAAEAAAADAAcAAQABAAEAAAADAAgAAQABAAEAAAAEAAYAAQABAAEAAAAEAAcAAQABAAEAAAAEAAgAAQABAAEAAAAFAAYAAQABAAEAAAAFAAcAAQABAAEAAAAFAAgAAQABAAEAAAAGAAYAAQABAAEAAAAGAAcAAQABAAEAAAAGAAgAAQABAAEAAAAHAAYAAAAAAAAAAAAHAAgAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAgAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAgAAAAAAAAAAAAKAAYAAQAGAAEAAAAKAAcAAQAGAAEAAAAKAAgAAQAGAAEAAAALAAYAAQAGAAEAAAALAAcAAQAGAAEAAAALAAgAAQAGAAEAAAAMAAYAAQAGAAEAAAAMAAcAAQAGAAEAAAAMAAgAAQAGAAEAAAANAAYAAQAGAAEAAAANAAcAAQAGAAEAAAANAAgAAQAGAAEAAAAOAAYAAQAGAAEAAAAOAAcAAQAGAAEAAAAOAAgAAQAGAAEAAAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAABAAEAAQABAAEAAAACAAEAAQABAAEAAAACAAIAAQABAAEAAAADAAIAAQABAAEAAAAEAAIAAQABAAEAAAAFAAIAAQABAAEAAAAFAAMAAQABAAEAAAAGAAMAAQABAAEAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAOAAQAAQAGAAEAAAAOAAMAAQAGAAEAAAAOAAIAAQAGAAEAAAAOAAEAAQAGAAEAAAAOAAAAAQAGAAEAAAANAAQAAQAGAAEAAAANAAMAAQAGAAEAAAANAAIAAQAGAAEAAAANAAEAAQAGAAEAAAANAAAAAQAGAAEAAAAMAAQAAQAGAAEAAAAMAAIAAQAGAAEAAAAMAAEAAQAGAAEAAAAMAAAAAQAGAAEAAAALAAQAAQAGAAEAAAALAAMAAQAGAAEAAAALAAIAAQAGAAEAAAALAAEAAQAGAAEAAAALAAAAAQAGAAEAAAAKAAQAAQAGAAEAAAAKAAMAAQAGAAEAAAAKAAIAAQAGAAEAAAAKAAEAAQAGAAEAAAAKAAAAAQAGAAEAAAAJAAQAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAAAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAAAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAAAAAAAAAAAAAAGAAQAAQABAAEAAAAGAAIAAQABAAEAAAAGAAEAAQABAAEAAAAGAAAAAQABAAAAAAAFAAQAAQABAAEAAAAFAAEAAQABAAEAAAAFAAAAAQABAAAAAAAEAAQAAQABAAEAAAAEAAMAAQABAAEAAAAEAAEAAQABAAEAAAAEAAAAAQABAAAAAAADAAQAAQABAAEAAAADAAMAAQABAAEAAAADAAEAAQABAAEAAAADAAAAAQABAAAAAAACAAQAAQABAAEAAAACAAMAAQABAAEAAAACAAAAAQABAAAAAAABAAQAAQABAAEAAAABAAMAAQABAAEAAAABAAIAAQABAAEAAAABAAAAAQABAAAAAAAAAAQAAQAAAAEAAAAAAAMAAQAAAAEAAAAAAAIAAQAAAAEAAAAHAAcAAAAAAAAAAAAIAAcAAAAAAAAAAAAJAAcAAAAAAAAAAAAMAAMAAQAGAAEAAAA=")
 tile_set = ExtResource("1_fjujm")
-
-[node name="IntroImage" type="Sprite2D" parent="TileMapLayers"]
-position = Vector2(1174.0001, 257)
-scale = Vector2(0.802083, 0.802083)
-texture = ExtResource("2_0i8i3")
-
-[node name="TileMapLayer2" type="TileMapLayer" parent="TileMapLayers"]
-tile_set = SubResource("TileSet_rnv3t")
+metadata/_edit_lock_ = true
 
 [node name="Sand" type="TileMapLayer" parent="TileMapLayers"]
-tile_map_data = PackedByteArray("AAAAAAcAAQAGAAMAAAABAAcAAQAGAAMAAAACAAcAAQAGAAMAAAADAAcAAQAGAAMAAAAEAAcAAQAGAAMAAAAFAAcAAQAGAAMAAAAGAAcAAQAGAAMAAAAMAAcAAQAGAAMAAAANAAcAAQAGAAMAAAAOAAcAAQAGAAMAAAAHAAcAAwAAAAAAAAAIAAcAAwABAAAAAAAJAAcAAwABAAAAAAAKAAcAAwABAAAAAAALAAcAAwACAAAAAAA=")
+tile_map_data = PackedByteArray("AAAHAAcAAwABAAAAAAAIAAcAAwABAAAAAAAJAAcAAwABAAAAAAAGAAcAAwAAAAAAAAAKAAcAAwACAAAAAAA=")
 tile_set = ExtResource("1_fjujm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(153, 366)
 zoom = Vector2(1.333, 1.333)
-limit_left = 3
-limit_top = 7
-limit_right = 963
-limit_bottom = 547
+limit_left = 0
+limit_top = 0
+limit_right = 960
+limit_bottom = 540
 position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="OnTheGround" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Character" type="AnimatedSprite2D" parent="OnTheGround"]
-position = Vector2(400, 349)
-sprite_frames = ExtResource("3_8sr6o")
-animation = &"idle"
-autoplay = "idle"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OnTheGround"]
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_2qwfo")
 }
-
-[node name="Equipo2Trees1" parent="." instance=ExtResource("4_8sr6o")]
-position = Vector2(414, 0)
 
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 
@@ -158,9 +75,110 @@ animation_player = NodePath("../OnTheGround/AnimationPlayer")
 next_scene = "uid://cryotmw8ah8tr"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
-[node name="Castle" parent="." instance=ExtResource("9_2qwfo")]
-position = Vector2(161, 142)
-scale = Vector2(0.8, 0.8)
+[node name="House_1" parent="Cinematic" instance=ExtResource("7_k8xb2")]
+position = Vector2(234.99998, 338)
+scale = Vector2(-1.282655, 1.3447263)
 
 [node name="Rock" parent="." instance=ExtResource("6_8m1x8")]
-position = Vector2(125, 403)
+position = Vector2(312, 382)
+
+[node name="Rock2" parent="." instance=ExtResource("6_2qwfo")]
+position = Vector2(366, 520)
+
+[node name="WaterRock" parent="." instance=ExtResource("7_pmcje")]
+position = Vector2(541, 423)
+
+[node name="WaterRock2" parent="." instance=ExtResource("7_pmcje")]
+position = Vector2(538, 540)
+
+[node name="Ghost" parent="." instance=ExtResource("8_ljf15")]
+position = Vector2(770, 282)
+
+[node name="Ghost2" parent="." instance=ExtResource("8_ljf15")]
+position = Vector2(841, 284)
+
+[node name="Ghost3" parent="." instance=ExtResource("8_ljf15")]
+position = Vector2(911, 277)
+
+[node name="Ghost4" parent="." instance=ExtResource("8_ljf15")]
+position = Vector2(959, 285)
+
+[node name="Equipo2Trees1" parent="." instance=ExtResource("9_4u78g")]
+position = Vector2(17, 56)
+scale = Vector2(0.46756014, 0.8213376)
+
+[node name="Tree12" parent="Equipo2Trees1" instance=ExtResource("10_jeu3m")]
+position = Vector2(1447.942, 357.95273)
+scale = Vector2(1.715856, 0.98897916)
+
+[node name="Equipo2Trees1" parent="Equipo2Trees1" instance=ExtResource("9_4u78g")]
+position = Vector2(1341.004, -1.2175293)
+scale = Vector2(0.7653847, 0.93812346)
+
+[node name="Tree11" parent="Equipo2Trees1" instance=ExtResource("10_jeu3m")]
+position = Vector2(1829.9916, 202.0627)
+scale = Vector2(0.9424039, 1.0140883)
+
+[node name="Tree13" parent="Equipo2Trees1" instance=ExtResource("8_p41og")]
+position = Vector2(149.71336, 540.5816)
+scale = Vector2(2.1387622, 1.1773479)
+
+[node name="Equipo2Trees2" parent="Equipo2Trees1" instance=ExtResource("9_4u78g")]
+position = Vector2(1345.2816, 112.012405)
+scale = Vector2(0.7653847, 0.93812346)
+
+[node name="Equipo2Trees3" parent="Equipo2Trees1" instance=ExtResource("9_4u78g")]
+position = Vector2(1360.2529, 169.23615)
+scale = Vector2(0.7653847, 0.93812346)
+
+[node name="Equipo2Trees5" parent="Equipo2Trees1" instance=ExtResource("9_4u78g")]
+position = Vector2(1499.2723, 415.17636)
+scale = Vector2(0.7653847, 0.93812346)
+
+[node name="Equipo2Trees6" parent="Equipo2Trees1" instance=ExtResource("9_4u78g")]
+position = Vector2(1469.3296, 547.8867)
+scale = Vector2(0.7653847, 0.93812346)
+
+[node name="Equipo2Trees4" parent="Equipo2Trees1" instance=ExtResource("9_4u78g")]
+position = Vector2(1383.7792, 681.8146)
+scale = Vector2(0.7653847, 0.93812346)
+
+[node name="Flower" parent="Equipo2Trees1" instance=ExtResource("12_g5ey0")]
+position = Vector2(735.73425, 339.68985)
+scale = Vector2(4.1613836, 3.0956755)
+
+[node name="Flower2" parent="Equipo2Trees1" instance=ExtResource("12_g5ey0")]
+position = Vector2(872.6149, 601.4579)
+scale = Vector2(4.1613836, 3.0956755)
+
+[node name="Flower6" parent="Equipo2Trees1" instance=ExtResource("12_g5ey0")]
+position = Vector2(870.47626, 401.78363)
+scale = Vector2(4.1613836, 3.0956755)
+
+[node name="Flower7" parent="Equipo2Trees1" instance=ExtResource("12_g5ey0")]
+position = Vector2(776.3707, 196.02171)
+scale = Vector2(4.1613836, 3.0956755)
+
+[node name="Flower3" parent="Equipo2Trees1" instance=ExtResource("12_g5ey0")]
+position = Vector2(139.01955, 191.15161)
+scale = Vector2(4.1613836, 3.0956755)
+
+[node name="Flower4" parent="Equipo2Trees1" instance=ExtResource("12_g5ey0")]
+position = Vector2(243.81891, 595.37024)
+scale = Vector2(4.1613836, 3.0956755)
+
+[node name="Apolo" type="AnimatedSprite2D" parent="."]
+position = Vector2(205, 394)
+sprite_frames = ExtResource("13_qdnjy")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Character" type="AnimatedSprite2D" parent="."]
+position = Vector2(229, 481)
+sprite_frames = ExtResource("14_3b066")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="Scarecrow" type="Sprite2D" parent="Character"]
+position = Vector2(441, -101)
+texture = ExtResource("15_o7yw8")
