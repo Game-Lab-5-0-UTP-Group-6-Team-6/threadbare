@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://oro3h87r022r"]
+[gd_scene load_steps=23 format=4 uid="uid://oro3h87r022r"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_fjujm"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_rnv3t"]
@@ -15,6 +15,14 @@
 [ext_resource type="SpriteFrames" uid="uid://ddpc5h6jtt6uq" path="res://scenes/quests/story_quests/el_juguete_perdido/player_components/apolo_components/apolo_toy.tres" id="13_qdnjy"]
 [ext_resource type="SpriteFrames" uid="uid://dtoylirwywk0j" path="res://scenes/game_elements/characters/components/sprite_frames/storyweaver_blue.tres" id="14_3b066"]
 [ext_resource type="Texture2D" uid="uid://7afi18x3x1dm" path="res://assets/third_party/tiny-swords/Deco/18.png" id="15_o7yw8"]
+[ext_resource type="PackedScene" uid="uid://bdtis4ye3hah2" path="res://scenes/quests/story_quests/shjourney/9_shjourney_outro_2/neblina.tscn" id="16_pmcje"]
+
+[sub_resource type="Gradient" id="Gradient_pmcje"]
+offsets = PackedFloat32Array(0, 0.086666666, 0.98)
+colors = PackedColorArray(0.68, 0.68, 0.68, 0, 0.68, 0.68, 0.68, 0.43137255, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ljf15"]
+gradient = SubResource("Gradient_pmcje")
 
 [sub_resource type="Animation" id="Animation_1w7rv"]
 length = 0.001
@@ -36,6 +44,13 @@ _data = {
 
 [node name="Intro" type="Node2D"]
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 12
+position = Vector2(-3810, 270)
+scale = Vector2(9.4375, 9.515625)
+texture = SubResource("GradientTexture2D_ljf15")
+offset = Vector2(500, 0)
+
 [node name="TileMapLayers" type="Node2D" parent="."]
 
 [node name="Ground" type="TileMapLayer" parent="TileMapLayers"]
@@ -46,6 +61,11 @@ metadata/_edit_lock_ = true
 [node name="Sand" type="TileMapLayer" parent="TileMapLayers"]
 tile_map_data = PackedByteArray("AAAHAAcAAwABAAAAAAAIAAcAAwABAAAAAAAJAAcAAwABAAAAAAAGAAcAAwAAAAAAAAAKAAcAAwACAAAAAAA=")
 tile_set = ExtResource("1_fjujm")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="TileMapLayers"]
+visible = false
+position = Vector2(200, 0)
+color = Color(0.481789, 0.48179, 0.481789, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(153, 366)
@@ -140,7 +160,7 @@ position = Vector2(1469.3296, 547.8867)
 scale = Vector2(0.7653847, 0.93812346)
 
 [node name="Equipo2Trees4" parent="Equipo2Trees1" instance=ExtResource("9_4u78g")]
-position = Vector2(1383.7792, 681.8146)
+position = Vector2(1370.9468, 674.5095)
 scale = Vector2(0.7653847, 0.93812346)
 
 [node name="Flower" parent="Equipo2Trees1" instance=ExtResource("12_g5ey0")]
@@ -168,7 +188,7 @@ position = Vector2(243.81891, 595.37024)
 scale = Vector2(4.1613836, 3.0956755)
 
 [node name="Apolo" type="AnimatedSprite2D" parent="."]
-position = Vector2(205, 394)
+position = Vector2(221, 389)
 sprite_frames = ExtResource("13_qdnjy")
 animation = &"idle"
 autoplay = "idle"
@@ -182,3 +202,7 @@ autoplay = "idle"
 [node name="Scarecrow" type="Sprite2D" parent="Character"]
 position = Vector2(441, -101)
 texture = ExtResource("15_o7yw8")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("16_pmcje")]
+scale = Vector2(3.7, 3.7)
+transform = Transform2D(3.7, 0, 0, 3.7, 0, 0)
