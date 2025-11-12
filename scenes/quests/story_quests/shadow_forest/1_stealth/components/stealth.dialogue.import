@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dekuveqofa52e"
+path="res://.godot/imported/stealth.dialogue-a04fe26d6f2bb20676a2b63c68763177.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/shadow_forest/1_stealth/components/stealth.dialogue"
+dest_files=["res://.godot/imported/stealth.dialogue-a04fe26d6f2bb20676a2b63c68763177.tres"]
+
+[params]
+
+defaults=true

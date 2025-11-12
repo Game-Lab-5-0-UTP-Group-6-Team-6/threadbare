@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bpj5ow233fs4t"
+path="res://.godot/imported/checkpoint.dialogue-7ceb0b90c36286f3ffb53d323f3ae339.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/shadow_forest/1_stealth/components/checkpoint.dialogue"
+dest_files=["res://.godot/imported/checkpoint.dialogue-7ceb0b90c36286f3ffb53d323f3ae339.tres"]
+
+[params]
+
+defaults=true
