@@ -18,10 +18,8 @@ extends Node
 ## Also keep track of the completed [FillingBarrel]s and emit [signal goal_reached]
 ## when [member barrels_to_win] is reached.
 
-## Emited when [member barrels_completed] reaches [member barrels_to_win].
 signal goal_reached
 
-## How many barrels to complete for winning.
 @export var barrels_to_win: int = 1
 
 @export var intro_dialogue: DialogueResource
@@ -41,6 +39,7 @@ func start() -> void:
 
 
 func _ready() -> void:
+	add_to_group("fill_game") # <- agregada para que otros nodos (ej. el spawner) lo encuentren fácilmente
 	var filling_barrels: Array = get_tree().get_nodes_in_group("filling_barrels")
 	barrels_to_win = clampi(barrels_to_win, 0, filling_barrels.size())
 	if intro_dialogue:
@@ -52,7 +51,7 @@ func _ready() -> void:
 
 func _update_allowed_colors() -> void:
 	var allowed_labels: Array[String] = []
-	var color_per_label: Dictionary[String, Color]
+	var color_per_label: Dictionary[String, Color] = {}
 	for filling_barrel: FillingBarrel in get_tree().get_nodes_in_group("filling_barrels"):
 		if filling_barrel.is_queued_for_deletion():
 			continue
@@ -61,9 +60,13 @@ func _update_allowed_colors() -> void:
 			if not filling_barrel.color:
 				continue
 			color_per_label[filling_barrel.label] = filling_barrel.color
-	for enemy: ThrowingEnemy in get_tree().get_nodes_in_group("throwing_enemy"):
-		enemy.allowed_labels = allowed_labels
-		enemy.color_per_label = color_per_label
+
+	# ← CAMBIO MÍNIMO: no asumimos el tipo, comprobamos antes de asignar
+	for enemy in get_tree().get_nodes_in_group("throwing_enemy"):
+		if enemy is ThrowingEnemy:
+			enemy.allowed_labels = allowed_labels
+			enemy.color_per_label = color_per_label
+		# si no es ThrowingEnemy, lo ignoramos (evita el error de asignación de tipos)
 
 
 func _on_barrel_completed() -> void:
@@ -76,4 +79,21 @@ func _on_barrel_completed() -> void:
 	var player: Player = get_tree().get_first_node_in_group("player")
 	if player:
 		player.mode = Player.Mode.COZY
+	goal_reached.emit()
+
+
+# ---------------------------------------------------------
+# NUEVO MÉTODO – FORZAR LA VICTORIA DESDE EL SPAWNER
+# (añadido exactamente como me pediste antes; no rompe nada)
+# ---------------------------------------------------------
+func force_win() -> void:
+	barrels_completed = barrels_to_win
+	_update_allowed_colors()
+	get_tree().call_group("throwing_enemy", "remove")
+	get_tree().call_group("projectiles", "remove")
+
+	var player: Player = get_tree().get_first_node_in_group("player")
+	if player:
+		player.mode = Player.Mode.COZY
+
 	goal_reached.emit()
