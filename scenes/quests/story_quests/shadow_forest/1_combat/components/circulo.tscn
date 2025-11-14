@@ -19,10 +19,6 @@ region = Rect2(0, 0, 128, 128)
 atlas = ExtResource("3_kcumf")
 region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bf7xa"]
-atlas = ExtResource("2_m3s07")
-region = Rect2(512, 0, 128, 128)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_i8j6m"]
 atlas = ExtResource("2_m3s07")
 region = Rect2(128, 0, 128, 128)
@@ -38,6 +34,10 @@ region = Rect2(384, 0, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_bqley"]
 atlas = ExtResource("3_kcumf")
 region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf7xa"]
+atlas = ExtResource("2_m3s07")
+region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o5ehk"]
 animations = [{
@@ -57,9 +57,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bf7xa")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_i8j6m")
 }, {
 "duration": 1.0,
@@ -70,6 +67,9 @@ animations = [{
 }, {
 "duration": 0.1,
 "texture": SubResource("AtlasTexture_bqley")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bf7xa")
 }],
 "loop": true,
 "name": &"activado",
@@ -89,5 +89,4 @@ shape = SubResource("CircleShape2D_y6u8n")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D/CollisionShape2D"]
 scale = Vector2(1.953125, 1.953125)
 sprite_frames = SubResource("SpriteFrames_o5ehk")
-animation = &"activado"
-frame_progress = 0.99976814
+animation = &"activacion"

@@ -2,9 +2,11 @@
 # SPDX-License-Identifier: MPL-2.0
 
 ~ start
-Someth
+Tienes 6 vidas.
+Favor de no salir de las "Paredes"
+Sobrevive y ganas.
 => END
 
 ~ well_done
-You 
+Felicidades.
 => END

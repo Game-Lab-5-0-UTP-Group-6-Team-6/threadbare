@@ -34,7 +34,7 @@ func run_pattern() -> void:
 
 	await get_tree().create_timer(total_duration).timeout
 	_running = false
-	print("✅ Patrón completado")
+
 
 	# ⭐ Al finalizar el tiempo → ganar el minijuego
 	var logic := get_tree().get_first_node_in_group("fill_game")

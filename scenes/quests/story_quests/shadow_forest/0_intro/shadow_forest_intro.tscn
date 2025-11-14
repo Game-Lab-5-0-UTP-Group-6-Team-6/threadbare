@@ -92,7 +92,7 @@ libraries = {
 script = ExtResource("4_rnv3t")
 dialogue = ExtResource("5_2fnb8")
 animation_player = NodePath("../OnTheGround/AnimationPlayer")
-next_scene = "uid://cryotmw8ah8tr"
+next_scene = "uid://bimv23urmo6ta"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="House_1" parent="Cinematic" instance=ExtResource("7_k8xb2")]

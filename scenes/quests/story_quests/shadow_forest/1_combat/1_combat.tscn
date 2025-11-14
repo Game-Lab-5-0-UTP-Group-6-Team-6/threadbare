@@ -26,7 +26,7 @@ type = 1
 metadata/_custom_type_script = "uid://bgmwplmj3bfls"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hb51d"]
-size = Vector2(1774, 1168)
+size = Vector2(1668, 1312)
 
 [sub_resource type="Resource" id="Resource_vbvtn"]
 script = ExtResource("15_jeh00")
@@ -153,7 +153,7 @@ color = Color(1, 1, 1, 1)
 unique_name_in_owner = true
 position = Vector2(6267, 1314)
 revealed = false
-next_scene = "uid://x3wm2ce0ax8i"
+next_scene = "uid://5t05pstcgooa"
 item = SubResource("Resource_a51xm")
 collected_dialogue = ExtResource("2_6dy4g")
 dialogue_title = &"well_done"
@@ -182,7 +182,7 @@ zoom = Vector2(0.75, 0.75)
 script = ExtResource("13_2f133")
 circle_scene = ExtResource("13_k6rsl")
 player_nodepath = NodePath("../OnTheGround/Player")
-spawn_interval = 75.0
+spawn_interval = 1.5
 
 [node name="Timer" type="Timer" parent="Spawner"]
 
@@ -190,7 +190,7 @@ spawn_interval = 75.0
 position = Vector2(1862, 604)
 script = ExtResource("14_hb51d")
 spawner_events = Array[ExtResource("15_jeh00")]([SubResource("Resource_vbvtn"), SubResource("Resource_yq7rh"), SubResource("Resource_ydxp4"), SubResource("Resource_acvwr"), SubResource("Resource_wwgka"), SubResource("Resource_jeai8"), SubResource("Resource_1ynfw"), SubResource("Resource_fh8qx"), SubResource("Resource_qgsyo"), SubResource("Resource_gjaih"), SubResource("Resource_julwe"), SubResource("Resource_rlney")])
-total_duration = 70.0
+total_duration = 75.0
 
 [node name="JefeSpawn" type="Node2D" parent="PatronDeEnemigo"]
 position = Vector2(4704, 416)
