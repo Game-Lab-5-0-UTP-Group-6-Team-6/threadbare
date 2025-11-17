@@ -145,9 +145,11 @@ tile_set = ExtResource("3_u0pdv")
 y_sort_enabled = true
 
 [node name="Player" parent="OnTheGround" instance=ExtResource("4_vj187")]
-position = Vector2(4746, 1444)
+position = Vector2(2954, 1320)
 walk_speed = 500.0
 run_speed = 700.0
+stopping_step = 100000.0
+moving_step = 100000.0
 
 [node name="Camera2D" type="Camera2D" parent="OnTheGround/Player"]
 visible = false
