@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj7m1x1da4jbj"]
+[gd_scene load_steps=6 format=3 uid="uid://bj7m1x1da4jbj"]
 
+[ext_resource type="Script" uid="uid://byr17hudvnrea" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/JASBHproyectile.gd" id="1_iu4ve"]
 [ext_resource type="SpriteFrames" uid="uid://bhamin2pby7tq" path="res://scenes/game_elements/props/projectile/components/inkblob_spriteframes.tres" id="2_15feh"]
 [ext_resource type="AudioStream" uid="uid://7jlv4wqpihl7" path="res://scenes/game_elements/props/projectile/components/blob_hit.wav" id="3_8yv0u"]
 
@@ -20,6 +21,7 @@ lock_rotation = true
 continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 1
+script = ExtResource("1_iu4ve")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_o6xl0")

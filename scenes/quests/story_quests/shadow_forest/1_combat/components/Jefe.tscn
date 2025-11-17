@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://caggchj2blgyb"]
+[gd_scene load_steps=13 format=3 uid="uid://caggchj2blgyb"]
 
 [ext_resource type="Script" uid="uid://bpur3drl0vstd" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/1_combat_enemy.gd" id="1_4i7tf"]
+[ext_resource type="PackedScene" uid="uid://bj7m1x1da4jbj" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/JasbHprojectile.tscn" id="2_cjbjx"]
 [ext_resource type="SpriteFrames" uid="uid://deosvk5k4su5f" path="res://scenes/quests/story_quests/NO_EDIT/2_NO_EDIT_combat/NO_EDIT_combat_components/NO_EDIT_throwing_enemy.tres" id="2_en50t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
@@ -242,6 +243,7 @@ _data = {
 collision_layer = 2
 collision_mask = 17
 script = ExtResource("1_4i7tf")
+projectile_scene = ExtResource("2_cjbjx")
 throwing_period = 0.1
 distance = 60.0
 projectile_speed = 100.0

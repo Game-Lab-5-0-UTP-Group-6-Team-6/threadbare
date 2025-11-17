@@ -11,5 +11,5 @@ do animation_player.animation_finished
 **Cosi:** ¡Recuperemos los Fragmentos de Sueños y derrotemos a la Rutina, Sir Remiendo!
 **Sir Remiendo:** Primero, a los Laberintos de Olvidio. ¿Estás listo para guiarme, joven aprendiz?
 do animation_player.play(&"walk_off")
-Explore other elements to mod, like the placeholder image, tile map, and animation options for this scene!
+asdasdasdasd
 => END
