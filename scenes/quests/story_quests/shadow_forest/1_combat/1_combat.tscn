@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bimv23urmo6ta"]
+[gd_scene load_steps=44 format=4 uid="uid://bimv23urmo6ta"]
 
 [ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="1_tu7jf"]
 [ext_resource type="Resource" uid="uid://3vrn5jdxov37" path="res://scenes/quests/story_quests/NO_EDIT/2_NO_EDIT_combat/NO_EDIT_combat_components/NO_EDIT_combat.dialogue" id="2_6dy4g"]
@@ -10,8 +10,10 @@
 [ext_resource type="SpriteFrames" uid="uid://c50725q5ey5j5" path="res://scenes/quests/story_quests/NO_EDIT/2_NO_EDIT_combat/NO_EDIT_combat_components/NO_EDIT_target_spriteframes.tres" id="7_4j1wc"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="8_7hkrn"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="9_hoq4w"]
+[ext_resource type="PackedScene" uid="uid://boc4ibh8o13d2" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/trees1.tscn" id="10_acvwr"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/story_quest_progress/hud/hud.tscn" id="10_swfxr"]
 [ext_resource type="PackedScene" uid="uid://coq1iavyqbdf4" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/JASBHenemy.tscn" id="11_hb51d"]
+[ext_resource type="PackedScene" uid="uid://bi6kyun7o3k3o" path="res://scenes/quests/story_quests/el_juguete_perdido/objects_components/tree_moving.tscn" id="11_jeai8"]
 [ext_resource type="Script" uid="uid://b1106cp7mq6wh" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/spawner.gd" id="13_2f133"]
 [ext_resource type="PackedScene" uid="uid://b8tesr5fqjntr" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/circulo.tscn" id="13_k6rsl"]
 [ext_resource type="Script" uid="uid://bb2efy5fuyg2n" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/camarazone.gd" id="13_yu04t"]
@@ -19,6 +21,14 @@
 [ext_resource type="Script" uid="uid://kkd4rn47s74p" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/jefe_spawn.gd" id="15_2f133"]
 [ext_resource type="Script" uid="uid://0idp4ja7w8fx" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/spawnevent.gd" id="15_jeh00"]
 [ext_resource type="PackedScene" uid="uid://caggchj2blgyb" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/Jefe.tscn" id="18_vbvtn"]
+[ext_resource type="PackedScene" uid="uid://bdtis4ye3hah2" path="res://scenes/quests/story_quests/shjourney/9_shjourney_outro_2/neblina.tscn" id="21_wwgka"]
+[ext_resource type="PackedScene" uid="uid://v3usqiwy5wpr" path="res://scenes/game_elements/props/decoration/rock/rock.tscn" id="23_1ynfw"]
+[ext_resource type="PackedScene" uid="uid://b2gk6rutivuq6" path="res://scenes/quests/story_quests/shjourney/5_shjourney_sequence_puzzle/shjourney_sequence_components/shjourney_Ghost.tscn" id="24_1ynfw"]
+[ext_resource type="Texture2D" uid="uid://b0uk36s6wl3mc" path="res://assets/third_party/tiny-swords/Deco/13.png" id="25_rlney"]
+[ext_resource type="Texture2D" uid="uid://cjs01ayn2h6ir" path="res://assets/third_party/tiny-swords/Deco/12.png" id="26_ixjny"]
+[ext_resource type="Texture2D" uid="uid://dtr1dolic05oj" path="res://assets/third_party/tiny-swords/Deco/10.png" id="27_m1ijx"]
+[ext_resource type="Texture2D" uid="uid://ck738xogv1kp5" path="res://assets/third_party/tiny-swords/Deco/11.png" id="28_d4deh"]
+[ext_resource type="Texture2D" uid="uid://7afi18x3x1dm" path="res://assets/third_party/tiny-swords/Deco/18.png" id="29_kvl1a"]
 
 [sub_resource type="Resource" id="Resource_a51xm"]
 script = ExtResource("9_hoq4w")
@@ -128,7 +138,7 @@ tile_map_data = PackedByteArray("AAANAAcAAQABAAEAAAANAAYAAQABAAEAAAANAAUAAQABAAE
 tile_set = ExtResource("3_u0pdv")
 
 [node name="Stones" type="TileMapLayer" parent="TileMapLayers"]
-tile_map_data = PackedByteArray("AAAGAAkABAABAAUAAAAHAAkABAABAAUAAAAIAAkABAABAAUAAAAJAAkABAABAAUAAAAKAAkABAABAAUAAAALAAkABAABAAUAAAAMAAkABAABAAUAAAANAAkABAABAAUAAAAOAAkABAABAAUAAAAGAAgABAABAAQAAAAHAAgABAABAAQAAAAIAAgABAABAAQAAAAJAAgABAABAAQAAAAKAAgABAABAAQAAAALAAgABAABAAQAAAAMAAgABAABAAQAAAANAAgABAABAAQAAAAOAAgABAABAAQAAAAAAAEABAACAAEAAAABAAEABAABAAMAAAACAAEABAABAAUAAAACAAAABAABAAQAAAABAAAABAABAAIAAAAAAAAABAABAAEAAAADAAAABAABAAIAAAAFAAAABAACAAIAAAAEAAAABAABAAEAAAAEAAEABAABAAMAAAAFAAEABAABAAUAAAADAAEABAABAAUAAAANAAYABAAAAAAAAAAOAAYABAABAAEAAAAOAAUABAAAAAEAAAAOAAMABAAAAAEAAAAOAAIABAABAAEAAAANAAEABAAAAAEAAAANAAAABAABAAAAAAAOAAAABAABAAAAAAAOAAEABAABAAEAAAAOAAQABAAAAAEAAAAMAAAABAABAAAAAAALAAAABAABAAAAAAAKAAAABAABAAAAAAAJAAAABAABAAAAAAAIAAAABAABAAAAAAAHAAAABAAAAAEAAAANAAIABAAAAAIAAAANAAMABAAAAAMAAAAHAAEABAABAAMAAAAIAAEABAABAAUAAAAKAAEABAABAAUAAAALAAEABAABAAUAAAAJAAEABAABAAMAAAAMAAEABAABAAMAAAAGAAAABAABAAIAAAAGAAEABAABAAMAAAAAAAkABAABAAUAAAABAAkABAABAAUAAAACAAkABAABAAUAAAADAAkABAABAAUAAAAEAAkABAABAAUAAAAFAAkABAABAAUAAAAAAAgABAABAAQAAAABAAgABAABAAQAAAACAAgABAABAAQAAAADAAgABAABAAQAAAAEAAgABAABAAQAAAAFAAgABAABAAQAAAAAAAIABAACAAEAAAAAAAMABAACAAEAAAAAAAQABAACAAEAAAAAAAcABAACAAEAAAAAAAYABAACAAEAAAAAAAUABAACAAEAAABOAA4ABAABAAEAAABOAA8ABAABAAEAAABOABAABAABAAEAAABOABEABAABAAEAAABOABIABAABAAEAAABOABcABAABAAEAAABOABgABAABAAEAAABOABkABAABAAEAAABOABoABAABAAEAAABOABsABAABAAEAAABoAA4ABAABAAEAAABoAA8ABAABAAEAAABoABAABAABAAEAAABoABEABAABAAEAAABoABIABAABAAEAAABoABMABAABAAEAAABoABQABAABAAEAAABoABUABAABAAEAAABoABYABAABAAEAAABoABcABAABAAEAAABoABgABAABAAEAAABoABkABAABAAEAAABoABoABAABAAEAAABoABsABAABAAEAAABPABsABAABAAEAAABQABsABAABAAEAAABRABsABAABAAEAAABSABsABAABAAEAAABTABsABAABAAEAAABUABsABAABAAEAAABVABsABAABAAEAAABWABsABAABAAEAAABXABsABAABAAEAAABYABsABAABAAEAAABZABsABAABAAEAAABaABsABAABAAEAAABbABsABAABAAEAAABcABsABAABAAEAAABdABsABAABAAEAAABeABsABAABAAEAAABfABsABAABAAEAAABgABsABAABAAEAAABhABsABAABAAEAAABiABsABAABAAEAAABjABsABAABAAEAAABkABsABAABAAEAAABlABsABAABAAEAAABmABsABAABAAEAAABnABsABAABAAEAAABPAA4ABAABAAEAAABnAA4ABAABAAEAAABnAA8ABAABAAEAAABnABAABAABAAEAAABnABEABAABAAEAAABnABIABAABAAEAAABnABMABAABAAEAAABnABQABAABAAEAAABnABUABAABAAEAAABnABYABAABAAEAAABnABcABAABAAEAAABnABgABAABAAEAAABnABkABAABAAEAAABnABoABAABAAEAAABPAA8ABAABAAEAAABPABAABAABAAEAAABPABEABAABAAEAAABPABIABAABAAEAAABPABcABAABAAEAAABPABgABAABAAEAAABPABkABAABAAEAAABPABoABAABAAEAAABOAA0ABAABAAEAAABPAA0ABAABAAEAAABQAA0ABAABAAEAAABRAA0ABAABAAEAAABSAA0ABAABAAEAAABTAA0ABAABAAEAAABUAA0ABAABAAEAAABVAA0ABAABAAEAAABWAA0ABAABAAEAAABXAA0ABAABAAEAAABYAA0ABAABAAEAAABZAA0ABAABAAEAAABaAA0ABAABAAEAAABbAA0ABAABAAEAAABcAA0ABAABAAEAAABdAA0ABAABAAEAAABeAA0ABAABAAEAAABfAA0ABAABAAEAAABgAA0ABAABAAEAAABhAA0ABAABAAEAAABiAA0ABAABAAEAAABjAA0ABAABAAEAAABkAA0ABAABAAEAAABlAA0ABAABAAEAAABmAA0ABAABAAEAAABnAA0ABAABAAEAAABoAA0ABAABAAEAAABOABYABAABAAEAAABPABYABAABAAEAAAA=")
+tile_map_data = PackedByteArray("AAAGAAkABAABAAUAAAAHAAkABAABAAUAAAAIAAkABAABAAUAAAAJAAkABAABAAUAAAAKAAkABAABAAUAAAALAAkABAABAAUAAAAMAAkABAABAAUAAAANAAkABAABAAUAAAAOAAkABAABAAUAAAAGAAgABAABAAQAAAAHAAgABAABAAQAAAAIAAgABAABAAQAAAAJAAgABAABAAQAAAAKAAgABAABAAQAAAALAAgABAABAAQAAAAMAAgABAABAAQAAAANAAgABAABAAQAAAAOAAgABAABAAQAAAAAAAEABAACAAEAAAABAAEABAABAAMAAAACAAEABAABAAUAAAACAAAABAABAAQAAAABAAAABAABAAIAAAAAAAAABAABAAEAAAADAAAABAABAAIAAAAFAAAABAACAAIAAAAEAAAABAABAAEAAAAEAAEABAABAAMAAAAFAAEABAABAAUAAAADAAEABAABAAUAAAANAAYABAAAAAAAAAAOAAYABAABAAEAAAAOAAUABAAAAAEAAAAOAAMABAAAAAEAAAAOAAIABAABAAEAAAANAAEABAAAAAEAAAANAAAABAABAAAAAAAOAAAABAABAAAAAAAOAAEABAABAAEAAAAOAAQABAAAAAEAAAAMAAAABAABAAAAAAALAAAABAABAAAAAAAKAAAABAABAAAAAAAJAAAABAABAAAAAAAIAAAABAABAAAAAAAHAAAABAAAAAEAAAANAAIABAAAAAIAAAANAAMABAAAAAMAAAAHAAEABAABAAMAAAAIAAEABAABAAUAAAAKAAEABAABAAUAAAALAAEABAABAAUAAAAJAAEABAABAAMAAAAMAAEABAABAAMAAAAGAAAABAABAAIAAAAGAAEABAABAAMAAAAAAAkABAABAAUAAAABAAkABAABAAUAAAACAAkABAABAAUAAAADAAkABAABAAUAAAAEAAkABAABAAUAAAAFAAkABAABAAUAAAAAAAgABAABAAQAAAABAAgABAABAAQAAAACAAgABAABAAQAAAADAAgABAABAAQAAAAEAAgABAABAAQAAAAFAAgABAABAAQAAAAAAAIABAACAAEAAAAAAAMABAACAAEAAAAAAAQABAACAAEAAAAAAAcABAACAAEAAAAAAAYABAACAAEAAAAAAAUABAACAAEAAABOAA4AAQAGAAEAAABOAA8AAQAGAAEAAABOABAAAQAGAAEAAABOABEAAQAGAAEAAABOABIAAQAGAAEAAABOABcAAQAGAAEAAABOABgAAQAGAAEAAABOABkAAQAGAAEAAABOABoAAQAGAAEAAABOABsAAQAGAAEAAABoAA4AAQAGAAEAAABoAA8AAQAGAAEAAABoABAAAQAGAAEAAABoABEAAQAGAAEAAABoABIAAQAGAAEAAABoABMAAQAGAAEAAABoABQAAQAGAAEAAABoABUAAQAGAAEAAABoABYAAQAGAAEAAABoABcAAQAGAAEAAABoABgAAQAGAAEAAABoABkAAQAGAAEAAABoABoAAQAGAAEAAABoABsAAQAGAAEAAABPABsAAQAGAAEAAABQABsAAQAGAAEAAABRABsAAQAGAAEAAABSABsAAQAGAAEAAABTABsAAQAGAAEAAABUABsAAQAGAAEAAABVABsAAQAGAAEAAABWABsAAQAGAAEAAABXABsAAQAGAAEAAABYABsAAQAGAAEAAABZABsAAQAGAAEAAABaABsAAQAGAAEAAABbABsAAQAGAAEAAABcABsAAQAGAAEAAABdABsAAQAGAAEAAABeABsAAQAGAAEAAABfABsAAQAGAAEAAABgABsAAQAGAAEAAABhABsAAQAGAAEAAABiABsAAQAGAAEAAABjABsAAQAGAAEAAABkABsAAQAGAAEAAABlABsAAQAGAAEAAABmABsAAQAGAAEAAABnABsAAQAGAAEAAABPAA4AAQAGAAEAAABnAA4AAQAGAAEAAABnAA8AAQAGAAEAAABnABAAAQAGAAEAAABnABEAAQAGAAEAAABnABIAAQAGAAEAAABnABMAAQAGAAEAAABnABQAAQAGAAEAAABnABUAAQAGAAEAAABnABYAAQAGAAEAAABnABcAAQAGAAEAAABnABgAAQAGAAEAAABnABkAAQAGAAEAAABnABoAAQAGAAEAAABPAA8AAQAGAAEAAABPABAAAQAGAAEAAABPABEAAQAGAAEAAABPABIAAQAGAAEAAABPABcAAQAGAAEAAABPABgAAQAGAAEAAABPABkAAQAGAAEAAABPABoAAQAGAAEAAABOAA0AAQAGAAEAAABPAA0AAQAGAAEAAABQAA0AAQAGAAEAAABRAA0AAQAGAAEAAABSAA0AAQAGAAEAAABTAA0AAQAGAAEAAABUAA0AAQAGAAEAAABVAA0AAQAGAAEAAABWAA0AAQAGAAEAAABXAA0AAQAGAAEAAABYAA0AAQAGAAEAAABZAA0AAQAGAAEAAABaAA0AAQAGAAEAAABbAA0AAQAGAAEAAABcAA0AAQAGAAEAAABdAA0AAQAGAAEAAABeAA0AAQAGAAEAAABfAA0AAQAGAAEAAABgAA0AAQAGAAEAAABhAA0AAQAGAAEAAABiAA0AAQAGAAEAAABjAA0AAQAGAAEAAABkAA0AAQAGAAEAAABlAA0AAQAGAAEAAABmAA0AAQAGAAEAAABnAA0AAQAGAAEAAABoAA0AAQAGAAEAAABOABYAAQAGAAEAAABPABYAAQAGAAEAAAA=")
 tile_set = ExtResource("3_u0pdv")
 
 [node name="OnTheGround" type="Node2D" parent="."]
@@ -158,9 +168,62 @@ item = SubResource("Resource_a51xm")
 collected_dialogue = ExtResource("2_6dy4g")
 dialogue_title = &"well_done"
 
+[node name="Equipo2Trees1" parent="." instance=ExtResource("10_acvwr")]
+position = Vector2(4978, 886)
+
+[node name="Equipo2Trees9" parent="." instance=ExtResource("10_acvwr")]
+position = Vector2(4991, 844)
+
+[node name="Equipo2Trees4" parent="." instance=ExtResource("10_acvwr")]
+position = Vector2(4993, 1715)
+
+[node name="Equipo2Trees5" parent="." instance=ExtResource("10_acvwr")]
+position = Vector2(4985, 1797)
+
+[node name="Equipo2Trees6" parent="." instance=ExtResource("10_acvwr")]
+position = Vector2(5831, 1719)
+
+[node name="Equipo2Trees7" parent="." instance=ExtResource("10_acvwr")]
+position = Vector2(5830, 1792)
+
+[node name="Equipo2Trees8" parent="." instance=ExtResource("10_acvwr")]
+position = Vector2(6670, 827)
+rotation = 1.560396
+
+[node name="Tree12" parent="Equipo2Trees8" instance=ExtResource("11_jeai8")]
+position = Vector2(237.0859, 1627.5536)
+rotation = -1.5281461
+scale = Vector2(1.2766027, 1.5325606)
+
+[node name="Tree13" parent="Equipo2Trees8" instance=ExtResource("11_jeai8")]
+position = Vector2(353.05884, 1630.7599)
+rotation = -1.5281461
+scale = Vector2(1.2766027, 1.5325606)
+
+[node name="Tree15" parent="Equipo2Trees8" instance=ExtResource("11_jeai8")]
+position = Vector2(712.15393, 1623.4941)
+rotation = -1.5281461
+scale = Vector2(1.2766029, 1.5325607)
+
+[node name="Tree14" parent="Equipo2Trees8" instance=ExtResource("11_jeai8")]
+position = Vector2(858.1251, 1627.0125)
+rotation = -1.5281461
+scale = Vector2(1.2766027, 1.5325606)
+
+[node name="Equipo2Trees2" parent="." instance=ExtResource("10_acvwr")]
+position = Vector2(5872, 898)
+
+[node name="Equipo2Trees10" parent="." instance=ExtResource("10_acvwr")]
+position = Vector2(5858, 858)
+
+[node name="Equipo2Trees3" parent="." instance=ExtResource("10_acvwr")]
+position = Vector2(6597, 884.99994)
+rotation = 1.574495
+
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="." instance=ExtResource("10_swfxr")]
+visible = false
 
 [node name="Camarazone" type="Area2D" parent="."]
 position = Vector2(2368, 792)
@@ -171,7 +234,8 @@ spawner_node = NodePath("../Spawner")
 enemy_pattern_node = NodePath("../PatronDeEnemigo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camarazone"]
-position = Vector2(3485, 525)
+visible = false
+position = Vector2(3483, 594)
 shape = SubResource("RectangleShape2D_hb51d")
 
 [node name="Camera2D" type="Camera2D" parent="Camarazone"]
@@ -257,5 +321,83 @@ position = Vector2(4512, 716)
 script = ExtResource("15_2f133")
 enemy_scene = ExtResource("5_o8c6i")
 lifetime = 1000000.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="PatronDeEnemigo/final"]
+position = Vector2(-6174, -1320)
+color = Color(0.481789, 0.48179, 0.481789, 1)
+
+[node name="ParallaxBackground" parent="PatronDeEnemigo/final" instance=ExtResource("21_wwgka")]
+scale = Vector2(3.7, 3.7)
+transform = Transform2D(3.7, 0, 0, 3.7, 0, 0)
+
+[node name="Rock" parent="." instance=ExtResource("23_1ynfw")]
+position = Vector2(4951, 1213)
+
+[node name="Rock2" parent="." instance=ExtResource("23_1ynfw")]
+position = Vector2(4832, 1217)
+
+[node name="Rock4" parent="." instance=ExtResource("23_1ynfw")]
+position = Vector2(4827, 1415)
+
+[node name="Rock3" parent="." instance=ExtResource("23_1ynfw")]
+position = Vector2(4889, 1214)
+
+[node name="Rock5" parent="." instance=ExtResource("23_1ynfw")]
+position = Vector2(4884, 1413)
+
+[node name="Rock6" parent="." instance=ExtResource("23_1ynfw")]
+position = Vector2(4943, 1414)
+
+[node name="Ghost" parent="Rock6" instance=ExtResource("24_1ynfw")]
+position = Vector2(386, -400)
+scale = Vector2(1.68, 1.52)
+
+[node name="Ghost2" parent="Rock6" instance=ExtResource("24_1ynfw")]
+position = Vector2(1284, 79)
+scale = Vector2(1.68, 1.52)
+
+[node name="Ghost3" parent="Rock6" instance=ExtResource("24_1ynfw")]
+position = Vector2(528, 95)
+scale = Vector2(1.68, 1.52)
+
+[node name="Ghost4" parent="Rock6" instance=ExtResource("24_1ynfw")]
+position = Vector2(1462, -362)
+scale = Vector2(1.68, 1.52)
+
+[node name="14" type="Sprite2D" parent="Rock6/Ghost4"]
+position = Vector2(-912.5, 41.447327)
+texture = ExtResource("25_rlney")
+
+[node name="15" type="Sprite2D" parent="Rock6/Ghost4/14"]
+position = Vector2(20.833292, -61.842033)
+texture = ExtResource("26_ixjny")
+
+[node name="16" type="Sprite2D" parent="Rock6/Ghost4/14/15"]
+position = Vector2(-18.452436, -63.815693)
+texture = ExtResource("27_m1ijx")
+
+[node name="17" type="Sprite2D" parent="Rock6/Ghost4/14/15/16"]
+position = Vector2(-1.1903831, -55.26315)
+texture = ExtResource("28_d4deh")
+
+[node name="15" type="Sprite2D" parent="Rock6/Ghost4"]
+position = Vector2(-910.7143, 480.92108)
+texture = ExtResource("25_rlney")
+
+[node name="15" type="Sprite2D" parent="Rock6/Ghost4/15"]
+position = Vector2(20.833292, -61.842033)
+texture = ExtResource("26_ixjny")
+
+[node name="16" type="Sprite2D" parent="Rock6/Ghost4/15/15"]
+position = Vector2(-18.452436, -63.815693)
+texture = ExtResource("27_m1ijx")
+
+[node name="17" type="Sprite2D" parent="Rock6/Ghost4/15/15/16"]
+position = Vector2(-1.1903831, -55.26315)
+texture = ExtResource("28_d4deh")
+
+[node name="Scarecrow" type="Sprite2D" parent="Rock6/Ghost4"]
+position = Vector2(-321.42865, 119.078926)
+texture = ExtResource("29_kvl1a")
 
 [connection signal="goal_reached" from="FillGameLogic" to="OnTheGround/CollectibleItem" method="reveal"]
