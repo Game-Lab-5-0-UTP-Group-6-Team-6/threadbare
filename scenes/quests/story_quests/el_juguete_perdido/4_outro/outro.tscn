@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=4 uid="uid://da7akt4pqtvpk"]
 
-[ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="1_wvc1n"]
+[ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/story_quest_progress/hud/hud.tscn" id="1_wvc1n"]
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="2_fwi5v"]
 [ext_resource type="PackedScene" uid="uid://boc4ibh8o13d2" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/trees1.tscn" id="3_bn2vy"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_c4l1a"]
@@ -81,7 +81,7 @@ position = Vector2(358, 332)
 texture = ExtResource("6_c7rvb")
 
 [node name="14" type="Sprite2D" parent="TileMapLayers/Garden"]
-position = Vector2(297, 340)
+position = Vector2(296, 339)
 texture = ExtResource("7_4yodc")
 
 [node name="15" type="Sprite2D" parent="TileMapLayers/Garden"]

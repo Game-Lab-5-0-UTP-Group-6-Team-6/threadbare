@@ -26,14 +26,86 @@ gradient = SubResource("Gradient_pmcje")
 
 [sub_resource type="Animation" id="Animation_1w7rv"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OnTheGround/Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-36, 458)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OnTheGround/Character:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
 
 [sub_resource type="Animation" id="Animation_k8xb2"]
 resource_name = "walk_off"
 length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OnTheGround/Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(226.375, 458), Vector2(737.245, 458)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OnTheGround/Character:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
 
 [sub_resource type="Animation" id="Animation_p41og"]
 resource_name = "walk_on"
 length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OnTheGround/Character:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walk", &"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OnTheGround/Character:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-36, 458), Vector2(226.375, 458)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2qwfo"]
 _data = {
@@ -80,19 +152,29 @@ editor_draw_limits = true
 [node name="OnTheGround" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="OnTheGround"]
-root_node = NodePath("../..")
+[node name="Character" type="AnimatedSprite2D" parent="OnTheGround"]
+position = Vector2(-36, 458)
+sprite_frames = ExtResource("14_3b066")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OnTheGround/Character"]
+root_node = NodePath("../../..")
 libraries = {
 &"": SubResource("AnimationLibrary_2qwfo")
 }
+
+[node name="Scarecrow" type="Sprite2D" parent="OnTheGround"]
+position = Vector2(670, 380)
+texture = ExtResource("15_o7yw8")
 
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 
 [node name="Cinematic" type="Node2D" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("4_rnv3t")
 dialogue = ExtResource("5_2fnb8")
-animation_player = NodePath("../OnTheGround/AnimationPlayer")
-next_scene = "uid://cryotmw8ah8tr"
+animation_player = NodePath("../OnTheGround/Character/AnimationPlayer")
+next_scene = "uid://bimv23urmo6ta"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="House_1" parent="Cinematic" instance=ExtResource("7_k8xb2")]
@@ -140,7 +222,7 @@ position = Vector2(1829.9916, 202.0627)
 scale = Vector2(0.9424039, 1.0140883)
 
 [node name="Tree13" parent="Equipo2Trees1" instance=ExtResource("8_p41og")]
-position = Vector2(149.71336, 540.5816)
+position = Vector2(102.660645, 377.4331)
 scale = Vector2(2.1387622, 1.1773479)
 
 [node name="Equipo2Trees2" parent="Equipo2Trees1" instance=ExtResource("9_4u78g")]
@@ -192,16 +274,6 @@ position = Vector2(221, 389)
 sprite_frames = ExtResource("13_qdnjy")
 animation = &"idle"
 autoplay = "idle"
-
-[node name="Character" type="AnimatedSprite2D" parent="."]
-position = Vector2(229, 481)
-sprite_frames = ExtResource("14_3b066")
-animation = &"walk"
-autoplay = "idle"
-
-[node name="Scarecrow" type="Sprite2D" parent="Character"]
-position = Vector2(441, -101)
-texture = ExtResource("15_o7yw8")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("16_pmcje")]
 scale = Vector2(3.7, 3.7)
