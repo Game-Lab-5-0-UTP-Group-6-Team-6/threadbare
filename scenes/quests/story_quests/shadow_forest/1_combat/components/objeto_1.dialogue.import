@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cgyv1nkma5mif"
+path="res://.godot/imported/objeto_1.dialogue-0b71afe316266ce6eb2ff9bbfea6e0ab.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/shadow_forest/1_combat/components/objeto_1.dialogue"
+dest_files=["res://.godot/imported/objeto_1.dialogue-0b71afe316266ce6eb2ff9bbfea6e0ab.tres"]
+
+[params]
+
+defaults=true
