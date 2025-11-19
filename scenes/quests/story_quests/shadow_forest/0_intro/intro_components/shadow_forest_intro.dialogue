@@ -4,7 +4,8 @@
 ~ start
 do animation_player.play(&"walk_on")
 do animation_player.animation_finished
-**Sir Remiendo:** ¡Cosi! El viento oscuro del Olvidio ha soplado desde el este.
+**Sir Remiendo:** ¡Era un dia muy soleado en la Aldea
+Cosi! El viento oscuro del Olvidio ha soplado desde el este.
 **Cosi:** ¿La Marcha de las Sombras? ¡Mire el río, Sir! Se ha vuelto un espejo de la Apatía.
 **Sir Remiendo:** Exacto. Han invadido Hebra Mayor y van por el Fuerte del Hilo Azul.
 **Sir Remiendo:** Nuestro deber es claro: debemos recuperar la Imaginación perdida antes de que la consuman.
