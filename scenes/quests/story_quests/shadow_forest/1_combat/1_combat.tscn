@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://bimv23urmo6ta"]
+[gd_scene load_steps=49 format=4 uid="uid://bimv23urmo6ta"]
 
 [ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="1_tu7jf"]
 [ext_resource type="Resource" uid="uid://doqf8funoshqo" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/1.dialogue" id="2_men7j"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://dtr1dolic05oj" path="res://assets/third_party/tiny-swords/Deco/10.png" id="27_m1ijx"]
 [ext_resource type="Texture2D" uid="uid://ck738xogv1kp5" path="res://assets/third_party/tiny-swords/Deco/11.png" id="28_d4deh"]
 [ext_resource type="Texture2D" uid="uid://7afi18x3x1dm" path="res://assets/third_party/tiny-swords/Deco/18.png" id="29_kvl1a"]
+[ext_resource type="PackedScene" uid="uid://bka7w2t8326gf" path="res://scenes/quests/story_quests/shadow_forest/1_combat/1_check.tscn" id="30_ixjny"]
 
 [sub_resource type="Resource" id="Resource_a51xm"]
 script = ExtResource("9_hoq4w")
@@ -36,7 +37,7 @@ type = 1
 metadata/_custom_type_script = "uid://bgmwplmj3bfls"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hb51d"]
-size = Vector2(1668, 1312)
+size = Vector2(1683, 897)
 
 [sub_resource type="Resource" id="Resource_vbvtn"]
 script = ExtResource("15_jeh00")
@@ -123,6 +124,18 @@ script = ExtResource("15_jeh00")
 time = 61.0
 metadata/_custom_type_script = "uid://0idp4ja7w8fx"
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlney"]
+size = Vector2(1727, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixjny"]
+size = Vector2(128, 958.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1ijx"]
+size = Vector2(128, 384)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4deh"]
+size = Vector2(18, 231)
+
 [node name="Combat" type="Node2D"]
 y_sort_enabled = true
 
@@ -145,7 +158,7 @@ tile_set = ExtResource("3_u0pdv")
 y_sort_enabled = true
 
 [node name="Player" parent="OnTheGround" instance=ExtResource("4_vj187")]
-position = Vector2(2954, 1320)
+position = Vector2(1241, 1241)
 walk_speed = 500.0
 run_speed = 700.0
 stopping_step = 100000.0
@@ -170,74 +183,23 @@ item = SubResource("Resource_a51xm")
 collected_dialogue = ExtResource("9_rlney")
 dialogue_title = &"well_done"
 
-[node name="Equipo2Trees1" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(5010, 801)
-
-[node name="Equipo2Trees9" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(5010, 716)
-
-[node name="Equipo2Trees4" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(4973, 1852)
-
-[node name="Equipo2Trees5" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(4948, 1977)
-
-[node name="Equipo2Trees6" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(5913, 1871)
-
-[node name="Equipo2Trees7" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(5864, 1981)
-
-[node name="Equipo2Trees8" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(6683, 809.00006)
-rotation = 1.560396
-
-[node name="Tree12" parent="Equipo2Trees8" instance=ExtResource("11_jeai8")]
-position = Vector2(172.93336, 1641.8872)
-rotation = -1.5281461
-scale = Vector2(1.2766027, 1.5325606)
-
-[node name="Tree13" parent="Equipo2Trees8" instance=ExtResource("11_jeai8")]
-position = Vector2(317.94632, 1641.3953)
-rotation = -1.5281461
-scale = Vector2(1.2766027, 1.5325606)
-
-[node name="Tree15" parent="Equipo2Trees8" instance=ExtResource("11_jeai8")]
-position = Vector2(763.05756, 1633.024)
-rotation = -1.5281461
-scale = Vector2(1.2766029, 1.5325607)
-
-[node name="Tree14" parent="Equipo2Trees8" instance=ExtResource("11_jeai8")]
-position = Vector2(923.99677, 1639.6982)
-rotation = -1.5281461
-scale = Vector2(1.2766027, 1.5325606)
-
-[node name="Equipo2Trees2" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(5990, 793)
-
-[node name="Equipo2Trees10" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(5942, 740)
-
-[node name="Equipo2Trees3" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(6871.9995, 879.99994)
-rotation = 1.574495
-
 [node name="ScreenOverlay" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="." instance=ExtResource("10_swfxr")]
 visible = false
 
 [node name="Camarazone" type="Area2D" parent="."]
+visible = false
 position = Vector2(2368, 792)
 script = ExtResource("13_yu04t")
 player_node = NodePath("../OnTheGround/Player")
 camera_node = NodePath("Camera2D")
 spawner_node = NodePath("../Spawner")
 enemy_pattern_node = NodePath("../PatronDeEnemigo")
+blocker_node = NodePath("../puerta")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camarazone"]
-visible = false
-position = Vector2(3483, 594)
+position = Vector2(3483.5, 517.5)
 shape = SubResource("RectangleShape2D_hb51d")
 
 [node name="Camera2D" type="Camera2D" parent="Camarazone"]
@@ -245,6 +207,7 @@ position = Vector2(3495, 518)
 zoom = Vector2(0.75, 0.75)
 
 [node name="Spawner" type="Node2D" parent="."]
+visible = false
 script = ExtResource("13_2f133")
 circle_scene = ExtResource("13_k6rsl")
 player_nodepath = NodePath("../OnTheGround/Player")
@@ -333,89 +296,235 @@ color = Color(0.481789, 0.48179, 0.481789, 1)
 scale = Vector2(3.7, 3.7)
 transform = Transform2D(3.7, 0, 0, 3.7, 0, 0)
 
-[node name="Rock" parent="." instance=ExtResource("23_1ynfw")]
-position = Vector2(4951, 1213)
+[node name="arboles" type="Node2D" parent="."]
 
-[node name="Rock2" parent="." instance=ExtResource("23_1ynfw")]
-position = Vector2(4832, 1217)
+[node name="Equipo2Trees1" parent="arboles" instance=ExtResource("10_acvwr")]
+position = Vector2(4998, 745)
 
-[node name="Rock4" parent="." instance=ExtResource("23_1ynfw")]
-position = Vector2(4827, 1415)
+[node name="Equipo2Trees2" parent="arboles" instance=ExtResource("10_acvwr")]
+position = Vector2(5952, 744)
 
-[node name="Rock3" parent="." instance=ExtResource("23_1ynfw")]
-position = Vector2(4889, 1214)
+[node name="Equipo2Trees3" parent="arboles" instance=ExtResource("10_acvwr")]
+position = Vector2(6701, 860)
+rotation = 1.574495
 
-[node name="Rock5" parent="." instance=ExtResource("23_1ynfw")]
-position = Vector2(4884, 1413)
+[node name="Equipo2Trees4" parent="arboles" instance=ExtResource("10_acvwr")]
+position = Vector2(5007, 800)
 
-[node name="Rock6" parent="." instance=ExtResource("23_1ynfw")]
-position = Vector2(4943, 1414)
+[node name="Equipo2Trees5" parent="arboles" instance=ExtResource("10_acvwr")]
+position = Vector2(5954, 803)
 
-[node name="Ghost" parent="Rock6" instance=ExtResource("24_1ynfw")]
-position = Vector2(-560, 270)
-scale = Vector2(1.68, 1.52)
+[node name="Equipo2Trees6" parent="arboles" instance=ExtResource("10_acvwr")]
+position = Vector2(5909, 1851)
 
-[node name="Ghost2" parent="Rock6" instance=ExtResource("24_1ynfw")]
-position = Vector2(-317, 274)
-scale = Vector2(1.68, 1.52)
+[node name="Equipo2Trees7" parent="arboles" instance=ExtResource("10_acvwr")]
+position = Vector2(4968, 1847)
 
-[node name="Ghost3" parent="Rock6" instance=ExtResource("24_1ynfw")]
-position = Vector2(-525, -506)
-scale = Vector2(1.68, 1.52)
+[node name="Equipo2Trees8" parent="arboles" instance=ExtResource("10_acvwr")]
+position = Vector2(6380.0005, 2275)
+rotation = 1.560396
 
-[node name="Ghost4" parent="Rock6" instance=ExtResource("24_1ynfw")]
-position = Vector2(-321, -510)
-scale = Vector2(1.68, 1.52)
+[node name="Equipo2Trees11" parent="arboles" instance=ExtResource("10_acvwr")]
+position = Vector2(2890, 2118)
 
-[node name="14" type="Sprite2D" parent="Rock6"]
-position = Vector2(-71, -299.00012)
+[node name="Equipo2Trees13" parent="arboles" instance=ExtResource("10_acvwr")]
+position = Vector2(3561, 2825)
+
+[node name="Tree12" parent="arboles" instance=ExtResource("11_jeai8")]
+position = Vector2(2453.9998, 1625)
+rotation = 0.03224981
+scale = Vector2(1.2766029, 1.5325607)
+
+[node name="Tree15" parent="arboles" instance=ExtResource("11_jeai8")]
+position = Vector2(4915, 1827)
+rotation = 0.03224981
+scale = Vector2(1.276603, 1.5325607)
+
+[node name="Tree16" parent="arboles" instance=ExtResource("11_jeai8")]
+position = Vector2(11095.957, 4827.8486)
+rotation = 0.070959754
+scale = Vector2(1.6300888, 2.3483684)
+skew = -0.011843443
+
+[node name="rocas" type="Node2D" parent="."]
+position = Vector2(3019, 1629)
+
+[node name="Rock" parent="rocas" instance=ExtResource("23_1ynfw")]
+position = Vector2(105, 112)
+
+[node name="Rock2" parent="rocas" instance=ExtResource("23_1ynfw")]
+position = Vector2(-14, 116)
+
+[node name="Rock4" parent="rocas" instance=ExtResource("23_1ynfw")]
+position = Vector2(-19, 314)
+
+[node name="Rock3" parent="rocas" instance=ExtResource("23_1ynfw")]
+position = Vector2(43, 113)
+
+[node name="Rock5" parent="rocas" instance=ExtResource("23_1ynfw")]
+position = Vector2(38, 312)
+
+[node name="Rock6" parent="rocas" instance=ExtResource("23_1ynfw")]
+position = Vector2(109, 307)
+
+[node name="plantas" type="Node2D" parent="."]
+visible = false
+
+[node name="15" type="Sprite2D" parent="plantas"]
+position = Vector2(3503, 1893)
 scale = Vector2(1.68, 1.52)
 texture = ExtResource("25_rlney")
 
-[node name="15" type="Sprite2D" parent="Rock6/14"]
-position = Vector2(20.833292, -61.842033)
+[node name="16" type="Sprite2D" parent="plantas"]
+position = Vector2(2389, 2172)
+scale = Vector2(1.68, 1.52)
 texture = ExtResource("26_ixjny")
 
-[node name="16" type="Sprite2D" parent="Rock6/14/15"]
-position = Vector2(-18.452436, -63.815693)
+[node name="17" type="Sprite2D" parent="plantas"]
+position = Vector2(2358, 2075.0002)
+scale = Vector2(1.68, 1.52)
 texture = ExtResource("27_m1ijx")
 
-[node name="17" type="Sprite2D" parent="Rock6/14/15/16"]
-position = Vector2(-1.1903831, -55.26315)
+[node name="18" type="Sprite2D" parent="plantas"]
+position = Vector2(2356.0002, 1991.0002)
+scale = Vector2(1.68, 1.52)
 texture = ExtResource("28_d4deh")
 
-[node name="15" type="Sprite2D" parent="Rock6"]
-position = Vector2(-68, 369)
+[node name="14" type="Sprite2D" parent="plantas"]
+position = Vector2(3101, 2147)
 scale = Vector2(1.68, 1.52)
 texture = ExtResource("25_rlney")
 
-[node name="15" type="Sprite2D" parent="Rock6/15"]
-position = Vector2(20.833292, -61.842033)
+[node name="19" type="Sprite2D" parent="plantas"]
+position = Vector2(3136, 2053)
+scale = Vector2(1.68, 1.52)
 texture = ExtResource("26_ixjny")
 
-[node name="16" type="Sprite2D" parent="Rock6/15/15"]
-position = Vector2(-18.452436, -63.815693)
+[node name="20" type="Sprite2D" parent="plantas"]
+position = Vector2(3105, 1956.0001)
+scale = Vector2(1.68, 1.52)
 texture = ExtResource("27_m1ijx")
 
-[node name="17" type="Sprite2D" parent="Rock6/15/15/16"]
-position = Vector2(-1.1903831, -55.26315)
+[node name="21" type="Sprite2D" parent="plantas"]
+position = Vector2(3103.0002, 1872.0001)
+scale = Vector2(1.68, 1.52)
 texture = ExtResource("28_d4deh")
 
-[node name="Scarecrow" type="Sprite2D" parent="Rock6"]
-position = Vector2(922, -181)
+[node name="Scarecrow" type="Sprite2D" parent="."]
+position = Vector2(5856, 1225.235)
 scale = Vector2(1.68, 1.52)
 texture = ExtResource("29_kvl1a")
 
-[node name="Equipo2Trees11" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(3759, 1058)
+[node name="fantasmas" type="Node2D" parent="."]
+position = Vector2(1282, 868)
 
-[node name="Equipo2Trees12" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(2821, 1047)
+[node name="Ghost" parent="fantasmas" instance=ExtResource("24_1ynfw")]
+position = Vector2(-136, 550)
+scale = Vector2(1.68, 1.52)
 
-[node name="Equipo2Trees13" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(3758, 1541)
+[node name="Ghost2" parent="fantasmas" instance=ExtResource("24_1ynfw")]
+position = Vector2(-212, 347)
+scale = Vector2(1.68, 1.52)
 
-[node name="Equipo2Trees14" parent="." instance=ExtResource("10_acvwr")]
-position = Vector2(2801, 1528)
+[node name="Ghost3" parent="fantasmas" instance=ExtResource("24_1ynfw")]
+position = Vector2(329, 643)
+scale = Vector2(1.68, 1.52)
+
+[node name="Ghost4" parent="fantasmas" instance=ExtResource("24_1ynfw")]
+position = Vector2(215, 251)
+scale = Vector2(1.68, 1.52)
+
+[node name="cajas" type="Node2D" parent="."]
+visible = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="cajas"]
+position = Vector2(5896, 867)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cajas/StaticBody2D"]
+position = Vector2(-40, -3)
+shape = SubResource("RectangleShape2D_rlney")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="cajas"]
+position = Vector2(5871, 1755)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cajas/StaticBody2D2"]
+position = Vector2(-15, 5)
+shape = SubResource("RectangleShape2D_rlney")
+
+[node name="lateral" type="StaticBody2D" parent="cajas"]
+position = Vector2(6652, 1212)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cajas/lateral"]
+position = Vector2(4, 99.25)
+shape = SubResource("RectangleShape2D_ixjny")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="cajas"]
+position = Vector2(5056, 1574)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cajas/StaticBody2D3"]
+position = Vector2(0, 26)
+shape = SubResource("RectangleShape2D_m1ijx")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="cajas"]
+position = Vector2(5049, 1068)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cajas/StaticBody2D4"]
+position = Vector2(7, -44)
+shape = SubResource("RectangleShape2D_m1ijx")
+
+[node name="puerta" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2(5053, 1297)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puerta"]
+position = Vector2(-52, 24.5)
+shape = SubResource("RectangleShape2D_d4deh")
+
+[node name="entrada" type="Node2D" parent="."]
+
+[node name="Equipo2Trees10" parent="entrada" instance=ExtResource("10_acvwr")]
+position = Vector2(4202, 1484)
+
+[node name="Equipo2Trees14" parent="entrada" instance=ExtResource("10_acvwr")]
+position = Vector2(4202, 1629)
+
+[node name="Equipo2Trees9" parent="entrada" instance=ExtResource("10_acvwr")]
+position = Vector2(4181, 945)
+
+[node name="Equipo2Trees12" parent="entrada" instance=ExtResource("10_acvwr")]
+position = Vector2(4190, 1077)
+
+[node name="entrada2" type="Node2D" parent="."]
+position = Vector2(3040, 1125)
+
+[node name="Equipo2Trees10" parent="entrada2" instance=ExtResource("10_acvwr")]
+position = Vector2(218, 349)
+
+[node name="Equipo2Trees14" parent="entrada2" instance=ExtResource("10_acvwr")]
+position = Vector2(218, 494)
+
+[node name="Equipo2Trees9" parent="entrada2" instance=ExtResource("10_acvwr")]
+position = Vector2(197, -190)
+
+[node name="Equipo2Trees12" parent="entrada2" instance=ExtResource("10_acvwr")]
+position = Vector2(206, -58)
+
+[node name="entrada3" type="Node2D" parent="."]
+position = Vector2(2081, 1118)
+
+[node name="Equipo2Trees10" parent="entrada3" instance=ExtResource("10_acvwr")]
+position = Vector2(218, 349)
+
+[node name="Equipo2Trees14" parent="entrada3" instance=ExtResource("10_acvwr")]
+position = Vector2(218, 494)
+
+[node name="Equipo2Trees9" parent="entrada3" instance=ExtResource("10_acvwr")]
+position = Vector2(197, -190)
+
+[node name="Equipo2Trees12" parent="entrada3" instance=ExtResource("10_acvwr")]
+position = Vector2(206, -58)
+
+[node name="Checkpoint" parent="." instance=ExtResource("30_ixjny")]
+position = Vector2(4742, 1267)
 
 [connection signal="goal_reached" from="FillGameLogic" to="OnTheGround/CollectibleItem" method="reveal"]
