@@ -2,11 +2,11 @@
 # SPDX-License-Identifier: MPL-2.0
 
 ~ start
-Tienes 6 vidas.
-Favor de no salir de las "Paredes"
-Sobrevive y ganas.
+Fantasma: Cuidado con el bosque, los arboles te atraparan.
+Fantasma 2: Si no lo hacen los arboles nuestros hermanos lo haran.
+Fantasma: Si logras aguantar un minuto, su poder se desvanecera.
 => END
 
 ~ well_done
-Felicidades.
+Fantasma malvado: Llevame a casa
 => END
