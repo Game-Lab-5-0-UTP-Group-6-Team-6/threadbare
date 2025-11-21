@@ -1,16 +1,44 @@
-[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://b00dcfe4dtvkh"]
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://b00dcfe4dtvkh"]
 
-[ext_resource type="Texture2D" uid="uid://cagyo41xspko" path="res://scenes/quests/story_quests/NO_EDIT/2_NO_EDIT_combat/NO_EDIT_combat_components/NO_EDIT_projectile.png" id="1_pusms"]
+[ext_resource type="Texture2D" uid="uid://csls3yuyceyhs" path="res://scenes/quests/story_quests/shadow_forest/sprites/BallFire_1.png" id="1_14lhg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a6ony"]
-atlas = ExtResource("1_pusms")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gq1k6"]
+atlas = ExtResource("1_14lhg")
+region = Rect2(0, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpoms"]
+atlas = ExtResource("1_14lhg")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efejs"]
+atlas = ExtResource("1_14lhg")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tij2"]
+atlas = ExtResource("1_14lhg")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn2u1"]
+atlas = ExtResource("1_14lhg")
 region = Rect2(0, 0, 64, 64)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a6ony")
+"texture": SubResource("AtlasTexture_gq1k6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpoms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efejs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tij2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn2u1")
 }],
 "loop": true,
 "name": &"default",

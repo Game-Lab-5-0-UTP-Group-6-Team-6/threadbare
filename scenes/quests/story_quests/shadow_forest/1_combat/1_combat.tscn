@@ -1,15 +1,16 @@
-[gd_scene load_steps=60 format=4 uid="uid://bimv23urmo6ta"]
+[gd_scene load_steps=62 format=4 uid="uid://bimv23urmo6ta"]
 
 [ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="1_tu7jf"]
 [ext_resource type="Resource" uid="uid://doqf8funoshqo" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/1.dialogue" id="2_men7j"]
 [ext_resource type="TileSet" uid="uid://c3qsfgdug8wbg" path="res://scenes/quests/story_quests/shadow_forest/shadow_forest_tileset.tres" id="3_7c0pa"]
 [ext_resource type="Texture2D" uid="uid://cfkb8gpxylplg" path="res://scenes/game_elements/props/buildings/house/components/House_Patches_Red_Stage3.png" id="4_7c0pa"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="4_vj187"]
-[ext_resource type="PackedScene" uid="uid://drwai71r305dt" path="res://scenes/quests/story_quests/shjourney/7_shjourney_combate/assets/ballfire.tscn" id="5_d4deh"]
+[ext_resource type="SpriteFrames" uid="uid://dwmccdufmbn28" path="res://scenes/quests/story_quests/shadow_forest/player_components/shadow_forest_player.tres" id="5_5okky"]
 [ext_resource type="PackedScene" uid="uid://b82nsrh332syj" path="res://scenes/game_elements/characters/enemies/throwing_enemy/throwing_enemy.tscn" id="5_o8c6i"]
 [ext_resource type="Texture2D" uid="uid://be3845r07rhkm" path="res://scenes/game_elements/props/buildings/house/components/House_Wool_Red_Stage3.png" id="5_t8awv"]
 [ext_resource type="Texture2D" uid="uid://c1bhlrwm2ph6x" path="res://assets/third_party/tiny-swords/Factions/Goblins/Buildings/Wood_House/Goblin_House_Destroyed.png" id="6_5okky"]
 [ext_resource type="PackedScene" uid="uid://y8ha8abfyap2" path="res://scenes/game_elements/props/filling_barrel/filling_barrel.tscn" id="6_8qsut"]
+[ext_resource type="PackedScene" uid="uid://p6q2uo2us0il" path="res://scenes/quests/story_quests/shjourney/light.tscn" id="6_t8awv"]
 [ext_resource type="SpriteFrames" uid="uid://c50725q5ey5j5" path="res://scenes/quests/story_quests/NO_EDIT/2_NO_EDIT_combat/NO_EDIT_combat_components/NO_EDIT_target_spriteframes.tres" id="7_4j1wc"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="8_7hkrn"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="9_hoq4w"]
@@ -34,8 +35,14 @@
 [ext_resource type="Texture2D" uid="uid://ck738xogv1kp5" path="res://assets/third_party/tiny-swords/Deco/11.png" id="28_d4deh"]
 [ext_resource type="Texture2D" uid="uid://7afi18x3x1dm" path="res://assets/third_party/tiny-swords/Deco/18.png" id="29_kvl1a"]
 [ext_resource type="PackedScene" uid="uid://bka7w2t8326gf" path="res://scenes/quests/story_quests/shadow_forest/1_combat/1_check.tscn" id="30_ixjny"]
-[ext_resource type="PackedScene" uid="uid://due8sqsrtdke1" path="res://scenes/quests/story_quests/shjourney/Otros_componentes/fire_fly.tscn" id="32_kvl1a"]
 [ext_resource type="Texture2D" uid="uid://cjpr8ft5kpu7x" path="res://scenes/quests/lore_quests/quest_001/1_music_puzzle/components/bonfire_sign/bonfire_sign.png" id="35_84660"]
+
+[sub_resource type="Gradient" id="Gradient_pmcje"]
+offsets = PackedFloat32Array(0.26, 0.5733333, 1)
+colors = PackedColorArray(0.49354547, 0.49354553, 0.49354553, 1, 0.68, 0.68, 0.68, 0.43137255, 0.68, 0.68, 0.68, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nq7d8"]
+gradient = SubResource("Gradient_pmcje")
 
 [sub_resource type="Resource" id="Resource_a51xm"]
 script = ExtResource("9_hoq4w")
@@ -151,12 +158,14 @@ size = Vector2(127.5, 383)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d4deh"]
 size = Vector2(18, 231)
 
-[sub_resource type="Gradient" id="Gradient_pmcje"]
-offsets = PackedFloat32Array(0.26, 0.5733333, 1)
-colors = PackedColorArray(0.49354547, 0.49354553, 0.49354553, 1, 0.68, 0.68, 0.68, 0.43137255, 0.68, 0.68, 0.68, 0)
+[sub_resource type="Gradient" id="Gradient_7c0pa"]
+offsets = PackedFloat32Array(0, 0.559441)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_nq7d8"]
-gradient = SubResource("Gradient_pmcje")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t8awv"]
+gradient = SubResource("Gradient_7c0pa")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [node name="Combat" type="Node2D"]
 y_sort_enabled = true
@@ -183,15 +192,32 @@ y_sort_enabled = true
 [node name="Player" parent="OnTheGround" instance=ExtResource("4_vj187")]
 position = Vector2(1241, 1241)
 walk_speed = 500.0
-run_speed = 700.0
+run_speed = 300.0
 stopping_step = 100000.0
 moving_step = 100000.0
-
-[node name="AnimatedSprite2D" parent="OnTheGround/Player" instance=ExtResource("5_d4deh")]
-position = Vector2(8, -6)
+sprite_frames = ExtResource("5_5okky")
 
 [node name="Camera2D" type="Camera2D" parent="OnTheGround/Player"]
 zoom = Vector2(1.2, 1.2)
+
+[node name="sombraI" type="Sprite2D" parent="OnTheGround/Player"]
+z_index = 12
+position = Vector2(-27043.002, -227.00002)
+rotation = -7.580278e-05
+scale = Vector2(52.71626, -57.508472)
+texture = SubResource("GradientTexture2D_nq7d8")
+offset = Vector2(500, 0)
+
+[node name="sombraD" type="Sprite2D" parent="OnTheGround/Player"]
+z_index = 12
+position = Vector2(30942, -258)
+rotation = 3.141517
+scale = Vector2(60.23676, -58.290115)
+texture = SubResource("GradientTexture2D_nq7d8")
+offset = Vector2(500, 0)
+
+[node name="Node2D" parent="OnTheGround/Player" instance=ExtResource("6_t8awv")]
+scale = Vector2(5.625, 5.625)
 
 [node name="Target" parent="OnTheGround" instance=ExtResource("6_8qsut")]
 position = Vector2(3025, 129)
@@ -617,26 +643,32 @@ position = Vector2(2079, 1084)
 scale = Vector2(0.890625, 0.9404762)
 texture = ExtResource("35_84660")
 
-[node name="FireFly" parent="BonfireSign" instance=ExtResource("32_kvl1a")]
-position = Vector2(-1.6842101, -21.797436)
-scale = Vector2(15.033678, -16.573105)
+[node name="Node2D" parent="BonfireSign" instance=ExtResource("6_t8awv")]
+scale = Vector2(5.625, 5.625)
+
+[node name="PointLight2D2" type="PointLight2D" parent="BonfireSign"]
+position = Vector2(-1.1227355, -20.20257)
+scale = Vector2(2.0364661, 1.8669294)
+color = Color(0.8781363, 0.20176207, 0.014604681, 1)
+energy = 1.2
+texture = SubResource("GradientTexture2D_t8awv")
+texture_scale = 0.4
 
 [node name="BonfireSign2" type="Sprite2D" parent="."]
 position = Vector2(2079, 1390)
 scale = Vector2(0.890625, 0.9404762)
 texture = ExtResource("35_84660")
 
-[node name="FireFly" parent="BonfireSign2" instance=ExtResource("32_kvl1a")]
-position = Vector2(-1.6842101, -21.797436)
-scale = Vector2(15.033678, -16.573105)
+[node name="Node2D" parent="BonfireSign2" instance=ExtResource("6_t8awv")]
+scale = Vector2(3.765, 3.765)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = 12
-position = Vector2(-22575.094, 1304.9814)
-rotation = -7.580278e-05
-scale = Vector2(47.682137, 24.904184)
-texture = SubResource("GradientTexture2D_nq7d8")
-offset = Vector2(500, 0)
+[node name="PointLight2D" type="PointLight2D" parent="BonfireSign2"]
+position = Vector2(-1.1227355, -20.20257)
+scale = Vector2(2.0364661, 1.8669294)
+color = Color(0.8781363, 0.20176207, 0.014604681, 1)
+energy = 1.2
+texture = SubResource("GradientTexture2D_t8awv")
+texture_scale = 0.4
 
 [node name="casas" type="Node2D" parent="."]
 position = Vector2(1675, 950)

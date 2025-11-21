@@ -1,6 +1,7 @@
 [gd_scene load_steps=40 format=4 uid="uid://oro3h87r022r"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_fjujm"]
+[ext_resource type="SpriteFrames" uid="uid://dwmccdufmbn28" path="res://scenes/quests/story_quests/shadow_forest/player_components/shadow_forest_player.tres" id="2_fjsby"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_rnv3t"]
 [ext_resource type="Resource" uid="uid://cgy6u576jarhk" path="res://scenes/quests/story_quests/shadow_forest/0_intro/intro_components/shadow_forest_intro.dialogue" id="5_2fnb8"]
 [ext_resource type="PackedScene" uid="uid://bxx5bf7wa3rlp" path="res://scenes/quests/story_quests/stella/3_stella_sequence_puzzle/stella_sequence_components/stella_hint_rock.tscn" id="6_2qwfo"]
@@ -13,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://bi6kyun7o3k3o" path="res://scenes/quests/story_quests/el_juguete_perdido/objects_components/tree_moving.tscn" id="10_jeu3m"]
 [ext_resource type="PackedScene" uid="uid://c0104ickpm3ru" path="res://scenes/game_elements/props/decoration/flower/flower.tscn" id="12_g5ey0"]
 [ext_resource type="SpriteFrames" uid="uid://ddpc5h6jtt6uq" path="res://scenes/quests/story_quests/el_juguete_perdido/player_components/apolo_components/apolo_toy.tres" id="13_qdnjy"]
-[ext_resource type="SpriteFrames" uid="uid://dtoylirwywk0j" path="res://scenes/game_elements/characters/components/sprite_frames/storyweaver_blue.tres" id="14_3b066"]
 [ext_resource type="Texture2D" uid="uid://7afi18x3x1dm" path="res://assets/third_party/tiny-swords/Deco/18.png" id="15_o7yw8"]
 [ext_resource type="PackedScene" uid="uid://bdtis4ye3hah2" path="res://scenes/quests/story_quests/shjourney/9_shjourney_outro_2/neblina.tscn" id="16_pmcje"]
 [ext_resource type="PackedScene" uid="uid://2rbpl811wlv1" path="res://scenes/game_elements/props/background_music/background_music.tscn" id="17_4u78g"]
@@ -81,7 +81,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(226.375, 458), Vector2(737.245, 458)]
+"values": [Vector2(226.375, 458), Vector2(1003.535, 458)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -121,7 +121,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-36, 458), Vector2(226.375, 458)]
+"values": [Vector2(-452.6, 458), Vector2(226.375, 458)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2qwfo"]
@@ -187,7 +187,7 @@ y_sort_enabled = true
 
 [node name="Character" type="AnimatedSprite2D" parent="OnTheGround"]
 position = Vector2(-36, 458)
-sprite_frames = ExtResource("14_3b066")
+sprite_frames = ExtResource("2_fjsby")
 animation = &"idle"
 autoplay = "idle"
 
