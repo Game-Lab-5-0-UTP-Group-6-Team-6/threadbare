@@ -1,10 +1,18 @@
-[gd_resource type="Resource" script_class="Quest" load_steps=2 format=3 uid="uid://dmhlay6kg5a2p"]
+[gd_resource type="Resource" script_class="Quest" load_steps=3 format=3 uid="uid://dmhlay6kg5a2p"]
 
 [ext_resource type="Script" uid="uid://dts1hwdy3phin" path="res://scenes/menus/storybook/components/quest.gd" id="1_j6vk3"]
+[ext_resource type="SpriteFrames" uid="uid://dwmccdufmbn28" path="res://scenes/quests/story_quests/shadow_forest/player_components/shadow_forest_player.tres" id="2_al7ic"]
 
 [resource]
 script = ExtResource("1_j6vk3")
 title = "Shadow Forest"
-description = "Las sombras no solo esconden oscuridad, también guardan verdades que nadie se atrevió a mirar"
+description = "El Bosque de las Sombras
+
+La historia sigue la desesperada búsqueda de Thamirys, una joven valiente que ha sido arrastrada por criaturas de oscuridad hacia el misterioso Bosque de las Sombras. Tobías, decidido a rescatarla, se adentra en un lugar donde la luz apenas existe y la niebla susurra recuerdos que no pertenecen a nadie.
+
+Ángela, su fiel compañera, advierte que el bosque no solo es hogar de sombras vivientes, sino también un laberinto de ilusiones capaz de robar memorias, deseos… o incluso el nombre de quienes lo atraviesan. Aun así, el vínculo que une a Tobías con Thamirys lo impulsa a seguir adelante.
+
+Con cada paso, criaturas hechas de oscuridad observan desde los árboles retorcidos, y antiguos secretos se revelan entre murmullos perdidos. En este viaje, el jugador deberá enfrentar la confusión, el miedo y las trampas del bosque para encontrar a Thamirys antes de que la sombra la consuma por completo."
 first_scene = "uid://oro3h87r022r"
+sprite_frames = ExtResource("2_al7ic")
 metadata/_custom_type_script = "uid://dts1hwdy3phin"

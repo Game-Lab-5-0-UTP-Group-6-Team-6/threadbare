@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://bka7w2t8326gf"]
+
+[ext_resource type="Script" uid="uid://bk5ri1yoakaqp" path="res://scenes/game_elements/props/checkpoint/components/checkpoint.gd" id="1_yk8h5"]
+[ext_resource type="Resource" uid="uid://d4n3k5t5kp0wa" path="res://scenes/quests/story_quests/shadow_forest/1_combat/check_1.dialogue" id="2_g6x23"]
+[ext_resource type="Script" uid="uid://0enyu5v4ra34" path="res://scenes/game_elements/props/spawn_point/components/spawn_point.gd" id="2_pn0y6"]
+[ext_resource type="SpriteFrames" uid="uid://dmg1egdoye3ns" path="res://scenes/game_elements/props/checkpoint/components/knitwitch_frames_purple.tres" id="3_sc47p"]
+[ext_resource type="PackedScene" uid="uid://dutgnbiy7xalb" path="res://scenes/game_elements/props/interact_area/interact_area.tscn" id="4_w2ry7"]
+[ext_resource type="Script" uid="uid://edcifob4jc4s" path="res://scenes/game_logic/talk_behavior.gd" id="5_vjdy3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3xcwf"]
+radius = 48.0
+
+[node name="Checkpoint" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_yk8h5")
+dialogue = ExtResource("2_g6x23")
+
+[node name="SpawnPoint" type="Marker2D" parent="." groups=["spawn_point"]]
+unique_name_in_owner = true
+script = ExtResource("2_pn0y6")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -40)
+sprite_frames = ExtResource("3_sc47p")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="InteractArea" parent="." instance=ExtResource("4_w2ry7")]
+unique_name_in_owner = true
+collision_layer = 0
+interact_label_position = Vector2(0, -128)
+disabled = true
+action = "Admire"
+
+[node name="CollisionShape" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(1, -4)
+shape = SubResource("CircleShape2D_3xcwf")
+debug_color = Color(0.600391, 0.54335, 0, 0.42)
+
+[node name="TalkBehavior" type="Node" parent="." node_paths=PackedStringArray("interact_area")]
+unique_name_in_owner = true
+script = ExtResource("5_vjdy3")
+interact_area = NodePath("../InteractArea")
+metadata/_custom_type_script = "uid://edcifob4jc4s"

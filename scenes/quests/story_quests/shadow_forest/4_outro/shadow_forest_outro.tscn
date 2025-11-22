@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/story_quest_progress/hud/hud.tscn" id="1_0cycm"]
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="2_s2if0"]
-[ext_resource type="SpriteFrames" uid="uid://dtoylirwywk0j" path="res://scenes/game_elements/characters/components/sprite_frames/storyweaver_blue.tres" id="3_3cn60"]
+[ext_resource type="SpriteFrames" uid="uid://dwmccdufmbn28" path="res://scenes/quests/story_quests/shadow_forest/player_components/shadow_forest_player.tres" id="3_3cn60"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_jbk18"]
 [ext_resource type="PackedScene" uid="uid://do8ya53bglr13" path="res://scenes/game_elements/props/buildings/castle/castle.tscn" id="4_ta2qp"]
 [ext_resource type="Resource" uid="uid://dc65fme82pc12" path="res://scenes/quests/story_quests/shadow_forest/4_outro/outro_components/shadow_forest_outro.dialogue" id="5_3cn60"]

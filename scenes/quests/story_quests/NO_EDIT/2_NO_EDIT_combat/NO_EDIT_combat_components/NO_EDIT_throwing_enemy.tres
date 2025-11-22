@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=25 format=3 uid="uid://deosvk5k4su5f"]
+[gd_resource type="SpriteFrames" load_steps=23 format=3 uid="uid://deosvk5k4su5f"]
 
 [ext_resource type="Texture2D" uid="uid://bahl2mnbgqa8v" path="res://scenes/quests/story_quests/shadow_forest/1_combat/components/fantasma_1.png" id="1_kxt6x"]
 [ext_resource type="Texture2D" uid="uid://cb3lim37pj3by" path="res://scenes/quests/story_quests/NO_EDIT/2_NO_EDIT_combat/NO_EDIT_combat_components/NO_EDIT_throwing_enemy_defeated.png" id="2_2ntg4"]
@@ -7,10 +7,6 @@
 atlas = ExtResource("1_kxt6x")
 region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2x8ro"]
-atlas = ExtResource("1_kxt6x")
-region = Rect2(100, 0, 100, 100)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_p37fd"]
 atlas = ExtResource("1_kxt6x")
 region = Rect2(200, 0, 100, 100)
@@ -18,6 +14,10 @@ region = Rect2(200, 0, 100, 100)
 [sub_resource type="AtlasTexture" id="AtlasTexture_qfye8"]
 atlas = ExtResource("1_kxt6x")
 region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2x8ro"]
+atlas = ExtResource("1_kxt6x")
+region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jsfal"]
 atlas = ExtResource("1_kxt6x")
@@ -55,17 +55,9 @@ region = Rect2(576, 0, 192, 192)
 atlas = ExtResource("1_kxt6x")
 region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kxt6x"]
-atlas = ExtResource("1_kxt6x")
-region = Rect2(200, 0, 100, 100)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_2iusg"]
 atlas = ExtResource("1_kxt6x")
 region = Rect2(100, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_35twb"]
-atlas = ExtResource("1_kxt6x")
-region = Rect2(100, 100, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jtump"]
 atlas = ExtResource("1_kxt6x")
@@ -98,13 +90,13 @@ animations = [{
 "texture": SubResource("AtlasTexture_v7nth")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2x8ro")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_p37fd")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qfye8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2x8ro")
 }],
 "loop": false,
 "name": &"attack",
@@ -149,13 +141,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_aniv6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kxt6x")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_2iusg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_35twb")
 }],
 "loop": true,
 "name": &"idle",

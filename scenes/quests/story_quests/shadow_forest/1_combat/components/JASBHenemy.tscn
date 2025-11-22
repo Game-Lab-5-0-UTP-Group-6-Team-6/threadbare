@@ -249,7 +249,7 @@ throwing_period = 1.6
 distance = 50.0
 projectile_speed = 70.0
 projectile_duration = 8.0
-bullet_count = 15
+bullet_count = 10
 separation = 6.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

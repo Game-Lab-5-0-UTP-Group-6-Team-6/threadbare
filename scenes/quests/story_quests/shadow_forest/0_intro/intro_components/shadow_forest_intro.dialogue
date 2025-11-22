@@ -4,12 +4,19 @@
 ~ start
 do animation_player.play(&"walk_on")
 do animation_player.animation_finished
-**Sir Remiendo:** ¡Cosi! El viento oscuro del Olvidio ha soplado desde el este.
-**Cosi:** ¿La Marcha de las Sombras? ¡Mire el río, Sir! Se ha vuelto un espejo de la Apatía.
-**Sir Remiendo:** Exacto. Han invadido Hebra Mayor y van por el Fuerte del Hilo Azul.
-**Sir Remiendo:** Nuestro deber es claro: debemos recuperar la Imaginación perdida antes de que la consuman.
-**Cosi:** ¡Recuperemos los Fragmentos de Sueños y derrotemos a la Rutina, Sir Remiendo!
-**Sir Remiendo:** Primero, a los Laberintos de Olvidio. ¿Estás listo para guiarme, joven aprendiz?
+Ángela: ¡Tobías! ¡Por fin te encuentro! Tenemos un problema muy serio.
+Tobías: ¿Dónde está Thamirys? La estuve buscando por todo el campamento.
+Ángela: Tobías… ella… desapareció.
+Tobías: ¿Qué significa "desapareció", Ángela? ¡Dímelo!
+Ángela: Fueron esos fantasmas… los mismos que vimos la otra noche.
+Tobías: ¿Fantasmas? ¡No… Thamirys!
+Ángela: La rodearon, murmurando cosas extrañas, y antes de que pudiera ayudarla… la niebla los envolvió.
+Tobías: ¿Hacia dónde se la llevaron?
+Ángela: Al Bosque del Olvido. Lo sé porque escuché a uno decirlo.
+Tobías: Ese bosque… la niebla puede hacer que uno pierda la memoria.
+Ángela: O la cordura, Tobías. Nadie que entra sale siendo el mismo.
 do animation_player.play(&"walk_off")
-asdasdasdasd
+Tobías: No puedo quedarme de brazos cruzados. Thamirys me necesita.
+Ángela: ¡Tobías, por favor! Es demasiado peligroso.
+Tobías: Peligroso o no… voy a traerla de vuelta. Aunque la niebla intente borrarme… no olvidaré quién debo salvar.
 => END
